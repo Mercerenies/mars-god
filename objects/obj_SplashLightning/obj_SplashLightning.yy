@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_MarsSplash",
-    "path": "sprites/spr_MarsSplash/spr_MarsSplash.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,6 +18,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
@@ -30,7 +29,7 @@
     "path": "folders/Splash/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_MarsSplash",
+  "name": "obj_SplashLightning",
   "tags": [],
   "resourceType": "GMObject",
 }
