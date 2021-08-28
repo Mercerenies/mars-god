@@ -69,12 +69,14 @@ activeWindowCount = function() {
 
 findWindowById = function(id_) {
   for (var index = 0; index < ds_list_size(original_order); index++) {
-    if (original_order[| index].window_body.getId() == id_) {
+    if (original_order[| index].window_body.windowId() == id_) {
       return original_order[| index];
     }
   }
   return undefined;
 }
+
+// Start Menu Initialization
 
 // DEBUG CODE
 addWindow(Windows.createWindow(new SampleWindow("Sample Window I"), 64, 64, -1, -1));

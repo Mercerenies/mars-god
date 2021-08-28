@@ -1,5 +1,4 @@
 
-// Parent class for window objects
 function Calculator() : WindowContents() constructor {
   _results = new _Calculator_ResultBox(self);
   _memory = 0;
@@ -103,6 +102,22 @@ function Calculator() : WindowContents() constructor {
     _memory_op = "";
     _memory = 0;
     resultsBox().setText("");
+  }
+
+}
+
+function CalculatorEntry() : StartMenuEntry() constructor {
+
+  static getIcon = function() {
+    return Icon.Calculator;
+  }
+
+  static getName = function() {
+    return "Calculator";
+  }
+
+  static onClick = function() {
+    
   }
 
 }

@@ -48,6 +48,7 @@
     {"id":{"name":"scr_Textbox","path":"scripts/scr_Textbox/scr_Textbox.yy",},"order":0,},
     {"id":{"name":"fnt_Calculator","path":"fonts/fnt_Calculator/fnt_Calculator.yy",},"order":1,},
     {"id":{"name":"spr_BossSplash","path":"sprites/spr_BossSplash/spr_BossSplash.yy",},"order":5,},
+    {"id":{"name":"scr_StartMenuEntry","path":"scripts/scr_StartMenuEntry/scr_StartMenuEntry.yy",},"order":3,},
     {"id":{"name":"obj_SplashLightning","path":"objects/obj_SplashLightning/obj_SplashLightning.yy",},"order":5,},
     {"id":{"name":"module_Windows","path":"scripts/module_Windows/module_Windows.yy",},"order":3,},
     {"id":{"name":"obj_BossSplash","path":"objects/obj_BossSplash/obj_BossSplash.yy",},"order":6,},

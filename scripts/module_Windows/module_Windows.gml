@@ -21,3 +21,18 @@ Windows.createWindow = function(body, xx, yy, w, h) {
   }
   return obj;
 }
+
+Windows.addNewWindow = function(body, xx, yy, w, h) {
+  var window = Windows.createWindow(body, xx, yy, w, h);
+  ctrl_WindowManager.addWindow(window);
+}
+
+Windows.addOrFindWindow = function(body, xx, yy, w, h) {
+  var id_ = body.windowId();
+  var existing = ctrl_WindowManager.findWindowById(id_);
+  if (!is_undefined(existing)) {
+    ctrl_WindowManager.moveToFront(existing);
+  } else {
+    Windows.addNewWindow(body, xx, yy, w, h);
+  }
+}

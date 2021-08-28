@@ -1,5 +1,4 @@
 
-// Parent class for window objects
 function SampleWindow(title) : WindowContents() constructor {
   _title = title;
   _textbox = new _SampleWindow_Textbox1(self);
