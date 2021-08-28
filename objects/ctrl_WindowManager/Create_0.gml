@@ -67,6 +67,15 @@ activeWindowCount = function() {
   return ds_list_size(z_order);
 }
 
+findWindowById = function(id_) {
+  for (var index = 0; index < ds_list_size(original_order); index++) {
+    if (original_order[| index].window_body.getId() == id_) {
+      return original_order[| index];
+    }
+  }
+  return undefined;
+}
+
 // DEBUG CODE
 addWindow(Windows.createWindow(new SampleWindow("Sample Window I"), 64, 64, -1, -1));
 addWindow(Windows.createWindow(new SampleWindow("Sample Window II with Long Titlebar Name Blah Blah Blah"), 128, 128, -1, -1));

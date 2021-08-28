@@ -3,8 +3,10 @@
 function SampleWindow(title) : WindowContents() constructor {
   _title = title;
   _textbox = new _SampleWindow_Textbox1(self);
+  _pwbox = new _SampleWindow_Textbox2(self);
 
   addChild(_textbox);
+  addChild(_pwbox);
 
   static windowTitle = function() {
     return _title;
@@ -20,6 +22,10 @@ function SampleWindow(title) : WindowContents() constructor {
 
   static iconIndex = function() {
     return Icon.Sample;
+  }
+
+  static windowId = function() {
+    return "SampleWindow";
   }
 
 }

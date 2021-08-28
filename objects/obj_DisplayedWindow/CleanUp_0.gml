@@ -1,2 +1,2 @@
 
-window_body.cleanup();
+window_body.event("cleanup");

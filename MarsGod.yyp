@@ -9,6 +9,7 @@
     {"id":{"name":"spr_TitlebarInactive","path":"sprites/spr_TitlebarInactive/spr_TitlebarInactive.yy",},"order":6,},
     {"id":{"name":"obj_Taskbar","path":"objects/obj_Taskbar/obj_Taskbar.yy",},"order":1,},
     {"id":{"name":"spr_Icon","path":"sprites/spr_Icon/spr_Icon.yy",},"order":0,},
+    {"id":{"name":"module_Events","path":"scripts/module_Events/module_Events.yy",},"order":4,},
     {"id":{"name":"rm_Main","path":"rooms/rm_Main/rm_Main.yy",},"order":1,},
     {"id":{"name":"ctrl_Screen","path":"objects/ctrl_Screen/ctrl_Screen.yy",},"order":2,},
     {"id":{"name":"obj_Cursor","path":"objects/obj_Cursor/obj_Cursor.yy",},"order":1,},

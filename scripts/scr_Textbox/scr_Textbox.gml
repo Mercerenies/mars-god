@@ -7,6 +7,10 @@ function Textbox() constructor {
     return point_in_rectangle(cursor_x(), cursor_y(), xPos(), yPos(), xPos() + getWidth(), yPos() + getHeight());
   }
 
+  event = function(ev) {
+    Events.callOn(self, ev);
+  }
+
   static step = function() {
     if (_focused) {
       _text = keyboard_string;
@@ -14,7 +18,7 @@ function Textbox() constructor {
   }
 
   static mouseDown = function() {
-    if (mouseWithin()) {
+    if ((mouseWithin()) && (isEditable)) {
       _focused = true;
       ctrl_Screen.resetCaretTick();
       keyboard_string = _text;
@@ -47,7 +51,7 @@ function Textbox() constructor {
     Util.drawSunkenBox(x1, y1, x2, y2);
 
     draw_set_color(Colors.BLACK);
-    draw_set_font(fnt_Titlebar);
+    draw_set_font(getFont());
     var t = getDisplayText();
     t = Util.truncateText(t, getWidth() - 4);
     draw_text(x1 + 2, y1 + 2, t);
@@ -58,6 +62,13 @@ function Textbox() constructor {
       }
     }
 
+  }
+
+  static isEditable = function() {
+    return true;
+  }
+  static getFont = function() {
+    return fnt_Titlebar;
   }
 
   static xPos = function() {
@@ -78,6 +89,10 @@ function Textbox() constructor {
 
   static getText = function() {
     return _text;
+  }
+
+  static setText = function(t) {
+    _text = t;
   }
 
   static getDisplayText = function() {

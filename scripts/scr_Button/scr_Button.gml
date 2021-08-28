@@ -6,6 +6,10 @@ function Button() constructor {
     return point_in_rectangle(cursor_x(), cursor_y(), xPos(), yPos(), xPos() + getWidth(), yPos() + getHeight());
   }
 
+  event = function(ev) {
+    Events.callOn(self, ev);
+  }
+
   static gMouseDown = function() {
     if (mouseWithin()) {
       _clicking = true;

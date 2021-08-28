@@ -20,12 +20,8 @@ function WindowContents() constructor {
     return Icon.Null;
   }
 
-  static step = function() {
-    _callOnChildren("step");
-  }
-
-  static draw = function() {
-    _callOnChildren("draw");
+  static windowId = function() {
+    return "WindowContents";
   }
 
   static getOwner = function() {
@@ -36,20 +32,16 @@ function WindowContents() constructor {
     _owner = owner;
   }
 
-  static mouseDown = function() {
-    _callOnChildren("mouseDown");
-  }
-
-  static gMouseDown = function() {
-    _callOnChildren("gMouseDown");
-  }
-
-  static mouseUp = function() {
-    _callOnChildren("mouseUp");
-  }
-
-  static gMouseUp = function() {
-    _callOnChildren("gMouseUp");
+  static event = function(ev) {
+    if (ev == "cleanup") {
+      // Reverse order so that _children still exists during cleanup
+      // delegation.
+      Events.delegateTo(_children, ev);
+      Events.callOn(self, ev);
+    } else {
+      Events.callOn(self, ev);
+      Events.delegateTo(_children, ev);
+    }
   }
 
   static cleanup = function() {

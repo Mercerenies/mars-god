@@ -45,6 +45,11 @@ pointIn = function(xx, yy) {
   return point_in_rectangle(xx, yy, x, y, x + getTotalWidth(), y + getTotalHeight());
 }
 
+event = function(ev) {
+  Events.callOn(self, ev);
+  // window_body.event(ev); // Don't delegate (lots of events have special delegation rules)
+}
+
 // "Draw" Event
 draw = function() {
 
@@ -62,7 +67,7 @@ draw = function() {
   // Contents
   draw_set_color(Colors.GRAY);
   draw_rectangle(x + 1, y + 1, x + w - 1, y + h - 1, false);
-  window_body.draw();
+  window_body.event("draw");
 
   // Titlebar
   draw_sprite(titlebar, 0, x, y);
@@ -81,8 +86,8 @@ draw = function() {
   draw_text(x + 4 + ICON_WIDTH, y + 4, titletext);
 
   // Caption Buttons
-  close_button.draw();
-  min_button.draw();
+  close_button.event("draw");
+  min_button.event("draw");
 
   // Border
   draw_set_color(Colors.WHITE);
@@ -95,8 +100,8 @@ draw = function() {
 
 // Mouse down
 mouseDown = function() {
-  close_button.gMouseDown();
-  min_button.gMouseDown();
+  close_button.event("gMouseDown");
+  min_button.event("gMouseDown");
   if (pointInTitlebar(cursor_x(), cursor_y())) {
     if ((!close_button.mouseWithin()) && (!min_button.mouseWithin())) {
       anchor_dragging = true;
@@ -104,24 +109,30 @@ mouseDown = function() {
       anchor_y = cursor_y() - y;
     }
   } else {
-    window_body.mouseDown();
+    window_body.event("mouseDown");
   }
 }
 
 // Global mouse down
 gMouseDown = function() {
-  window_body.gMouseDown();
+  window_body.event("gMouseDown");
 }
 
 // Mouse up
-mouseUp = function() {}
+mouseUp = function() {
+  close_button.event("gMouseUp");
+  min_button.event("gMouseUp");
+  if (!pointInTitlebar(cursor_x(), cursor_y())) {
+    window_body.event("mouseUp");
+  }
+}
 
 // Global mouse up
 gMouseUp = function() {
-  close_button.gMouseUp();
-  min_button.gMouseUp();
+  close_button.event("gMouseUp");
+  min_button.event("gMouseUp");
   anchor_dragging = false;
-  window_body.gMouseUp();
+  window_body.event("gMouseUp");
 }
 
 // Step (only called if not minimized)
@@ -134,6 +145,6 @@ step = function() {
   x = clamp(x, ScreenRegion.LEFT - getTotalWidth() + 64, ScreenRegion.RIGHT - 64);
   y = clamp(y, ScreenRegion.TOP - 8, ScreenRegion.BOTTOM - 96);
 
-  window_body.step();
+  window_body.event("step");
 
 }

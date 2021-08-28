@@ -25,6 +25,10 @@ cellEndY = function(cell_index) {
   return y + TASKBAR_CELL_HEIGHT;
 }
 
+event = function(ev) {
+  Events.callOn(self, ev);
+}
+
 // Mouse down
 mouseDown = function() {
   var windows = ctrl_WindowManager.original_order;
