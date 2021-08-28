@@ -112,6 +112,7 @@ function Listbox() constructor {
       }
 
       var field = getTextField(idx);
+      field = Util.truncateText(field, getWidth() - 4);
       draw_set_font(getFont());
       draw_set_color(fgcolor);
       draw_text(xx, yy, field);
