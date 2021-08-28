@@ -147,7 +147,7 @@
    Instant messaging service
 ** DONE MACROSOFT OFFICE LETTER
 ** MACROSOFT OFFICE EXCEED
-** MACROSOFT OFFICE POWERLINE
+** DONE MACROSOFT OFFICE POWERLINE
 ** STAPLEY THE STAPLER
 ** FIREDOG
    Web browser
@@ -166,6 +166,9 @@
 ** josephlawfirm.com
 ** romangods.com
 ** yoyogames.com (?)
+* OTHER THINGS
+** POWERLINE DOCS FOR CREDITS
+** POWERLINE DOCS FOR EMPLOYEE BRIEF (COMIC SANS)
 * ACHIEVEMENTS
 ** HARD WORKER (HW)
    Do way more data entry than required.
@@ -188,3 +191,5 @@
    Compress a file to less than 0 MB.
 ** STUDIOUSLY EDUCATED EMPLOYEE (SEE)
    Watch the new employee brief in Macrosoft Powerline.
+** SPAM SANDWICH (SS)
+   Reply to spam email.

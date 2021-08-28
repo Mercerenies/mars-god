@@ -58,3 +58,15 @@ function Videos() : Folder() constructor {
   }
 
 }
+
+function Mail() : Folder() constructor {
+
+  static getName = function() {
+    return "Mail";
+  }
+
+  static getIcon = function() {
+    return Icon.Mail;
+  }
+
+}

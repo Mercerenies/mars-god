@@ -12,4 +12,5 @@ enum Icon {
   Letter = 9,
   Powerline = 10,
   Exceed = 11,
+  Mail = 12,
 }

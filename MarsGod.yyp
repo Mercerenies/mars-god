@@ -64,6 +64,7 @@
     {"id":{"name":"module_Windows","path":"scripts/module_Windows/module_Windows.yy",},"order":3,},
     {"id":{"name":"obj_BossSplash","path":"objects/obj_BossSplash/obj_BossSplash.yy",},"order":6,},
     {"id":{"name":"spr_StartMenu","path":"sprites/spr_StartMenu/spr_StartMenu.yy",},"order":0,},
+    {"id":{"name":"win_MailManager","path":"scripts/win_MailManager/win_MailManager.yy",},"order":6,},
     {"id":{"name":"spr_ButtonMin","path":"sprites/spr_ButtonMin/spr_ButtonMin.yy",},"order":1,},
     {"id":{"name":"timeline_SplashTimeline","path":"timelines/timeline_SplashTimeline/timeline_SplashTimeline.yy",},"order":4,},
     {"id":{"name":"fnt_Titlebar","path":"fonts/fnt_Titlebar/fnt_Titlebar.yy",},"order":0,},

@@ -1,12 +1,14 @@
 
-// The file system consists of four folders: Documents, Music,
-// Pictures, Videos.
-folders = ["Documents", "Music", "Pictures", "Videos"];
+// The file system consists of five folders: Documents, Music,
+// Pictures, Videos, Mail. The last one is not accessible from the
+// file manager.
+folders = ["Documents", "Music", "Pictures", "Videos", "Mail"];
 _data = {};
 _data.Documents = ds_list_create();
 _data.Music = ds_list_create();
 _data.Pictures = ds_list_create();
 _data.Videos = ds_list_create();
+_data.Mail = ds_list_create();
 
 getFiles = function(folder) {
   return _data[$ folder.getName()];

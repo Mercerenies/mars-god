@@ -102,3 +102,39 @@ function SlideshowFile(name, size, sprite) : File() constructor {
 
 }
 
+function MailFile(sender, subject, text) : File() constructor {
+  _sender = sender;
+  _subject = subject;
+  _text = text;
+
+  static getBaseName = function() {
+    return _subject + ".eml";
+  }
+
+  static getBaseSize = function() {
+    return 2;
+  }
+
+  static getHeader = function() {
+    return getSender() + " - " + getSubject();
+  }
+
+  static getSender = function() {
+    return _sender;
+  }
+
+  static getSubject = function() {
+    return _subject;
+  }
+
+  static getContents = function() {
+    return _text;
+  }
+
+  static openFile = function() {
+    var mgr = Windows.addOrFindWindow(new MailViewer(), 240, 102, -1, -1);
+    mgr.window_body.openFile(self);
+  }
+
+}
+
