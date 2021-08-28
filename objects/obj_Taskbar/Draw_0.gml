@@ -40,3 +40,5 @@ for (var index = 0; index < ds_list_size(windows); index++) {
   }
 
 }
+
+start_button.event("draw");

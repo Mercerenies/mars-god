@@ -150,10 +150,12 @@
 ** FIREDOG
    Web browser
 ** MAIL
-** CALCULATOR
+** DONE CALCULATOR
 ** FILE EXPLORER
 ** CAMERA
 ** MINEBROOMER
+** CREDITS (?)
+** ACHIEVEMENTS
 * WEBSITES
 ** josephlawfirm.com
 ** romangods.com
@@ -174,3 +176,5 @@
    Win a round of each game available.
 ** NUMBERS THAT COUNT (NTC)
    Exceed some limit in the calculator
+** TOO MANY WINDOWS (TMW)
+   Have too many windows open

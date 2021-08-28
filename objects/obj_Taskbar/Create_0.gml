@@ -1,13 +1,15 @@
 
+start_button = new StartButton();
+
 currentCellWidth = function() {
   var total_available_space = ScreenRegion.RIGHT - ScreenRegion.LEFT - TASKBAR_PADDING * 2;
   var window_count = ctrl_WindowManager.windowCount();
-  var max_possible_width = total_available_space / max(window_count, 1) - TASKBAR_PADDING;
+  var max_possible_width = total_available_space / max(window_count, 1) - TASKBAR_PADDING - 30;
   return min(max_possible_width, TASKBAR_CELL_WIDTH);
 }
 
 cellStartX = function(cell_index) {
-  var xx = x + 4;
+  var xx = x + 4 + 30;
   var total_w = currentCellWidth() + TASKBAR_PADDING;
   return xx + total_w * cell_index;
 }
@@ -27,6 +29,7 @@ cellEndY = function(cell_index) {
 
 event = function(ev) {
   Events.callOn(self, ev);
+  start_button.event(ev);
 }
 
 // Mouse down

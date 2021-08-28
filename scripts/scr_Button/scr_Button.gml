@@ -10,7 +10,7 @@ function Button() constructor {
     Events.callOn(self, ev);
   }
 
-  static gMouseDown = function() {
+  static mouseDown = function() {
     if (mouseWithin()) {
       _clicking = true;
     }
