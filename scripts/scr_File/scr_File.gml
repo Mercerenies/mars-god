@@ -163,3 +163,31 @@ function ImageFile(name, size, sprite) : File() constructor {
   }
 
 }
+
+function MediaFile(name, size, audio) : File() constructor {
+  _name = name;
+  _size = size;
+  _audio = audio
+
+  static getBaseName = function() {
+    return _name;
+  }
+
+  static getBaseSize = function() {
+    return _size;
+  }
+
+  static getSprite = function() {
+    return spr_Image_Music;
+  }
+
+  static getSound = function() {
+    return _audio;
+  }
+
+  static openFile = function() {
+    var mgr = Windows.addOrFindWindow(new MediaPlayer(), 200, 82, -1, -1);
+    mgr.window_body.openFile(self);
+  }
+
+}

@@ -6,6 +6,7 @@ obj_StartMenu.addEntry(new ImageViewerEntry());
 obj_StartMenu.addEntry(new MacrosoftLetterEntry());
 obj_StartMenu.addEntry(new MacrosoftPowerlineEntry());
 obj_StartMenu.addEntry(new MailManagerEntry());
+obj_StartMenu.addEntry(new MediaPlayerEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Music()));
 obj_StartMenu.addEntry(new FileManagerEntry(new Pictures()));
 obj_StartMenu.addEntry(new FileManagerEntry(new Videos()));
@@ -29,3 +30,6 @@ ctrl_FileSystem.addFile(new Mail(), new MailFile("Mercerenies", "Hello :)", "Wel
 ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample1.png", 10, spr_Image_Example1));
 ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample2.png", 9, spr_Image_Example2));
 ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample3.png", 9, spr_Image_Example3));
+
+// Sample music
+ctrl_FileSystem.addFile(new Music(), new MediaFile("sample.ogg", 16, snd_Sound_Example));
