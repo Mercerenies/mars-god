@@ -2,8 +2,10 @@
 function FileManager() : WindowContents() constructor {
   _folder = new Documents();
   _folder_name = new _FileManager_FolderNameBox(self);
+  _folder_nav = new _FileManager_FolderListbox(self);
 
   addChild(_folder_name);
+  addChild(_folder_nav);
 
   static windowTitle = function() {
     return _folder.getName();
@@ -78,6 +80,36 @@ function _FileManager_FolderNameBox(owner) : Textbox() constructor {
 
   static getFont = function() {
     return fnt_Calculator;
+  }
+
+}
+
+function _FileManager_FolderListbox(owner) : Listbox() constructor {
+  _owner = owner;
+  _fields = [new Documents(), new Music(), new Pictures(), new Videos()];
+
+  static xPos = function() {
+    return _owner.getOwner().x + 8;
+  }
+
+  static yPos = function() {
+    return _owner.getOwner().y + sprite_get_height(spr_TitlebarActive) + 32;
+  }
+
+  static getWidth = function() {
+    return 112;
+  }
+
+  static getHeight = function() {
+    return 160;
+  }
+
+  static getTextField = function(idx) {
+    return _fields[idx].getName();
+  }
+
+  static getTextFieldCount = function() {
+    return array_length(_fields);
   }
 
 }

@@ -7,7 +7,7 @@ function Textbox() constructor {
     return point_in_rectangle(cursor_x(), cursor_y(), xPos(), yPos(), xPos() + getWidth(), yPos() + getHeight());
   }
 
-  event = function(ev) {
+  static event = function(ev) {
     Events.callOn(self, ev);
   }
 
@@ -67,6 +67,7 @@ function Textbox() constructor {
   static isEditable = function() {
     return true;
   }
+
   static getFont = function() {
     return fnt_Titlebar;
   }

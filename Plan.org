@@ -175,6 +175,8 @@
 ** KING OF GAMES (KOG)
    Win a round of each game available.
 ** NUMBERS THAT COUNT (NTC)
-   Exceed some limit in the calculator
+   Exceed some limit in the calculator.
 ** TOO MANY WINDOWS (TMW)
-   Have too many windows open
+   Have too many windows open.
+** PRESSURE IS ON (PIO)
+   Compress a file to less than 0 MB.
