@@ -21,7 +21,9 @@ for (var index = 0; index < ds_list_size(windows); index++) {
   draw_rectangle(x1, y1, x2, y2, false);
 
   var icon_index = windows[| index].window_body.iconIndex();
-  draw_sprite(spr_Icon, icon_index, x1 + 2, y1 + 2);
+  if (cell_width > ICON_WIDTH + 6) {
+    draw_sprite(spr_Icon, icon_index, x1 + 2, y1 + 2);
+  }
 
   var room_for_title = cell_width - 4 - ICON_WIDTH;
   var title = windows[| index].window_body.windowTitle();
