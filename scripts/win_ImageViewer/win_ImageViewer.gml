@@ -20,7 +20,7 @@ function ImageViewer() : WindowContents() constructor {
   }
 
   static iconIndex = function() {
-    return Icon.Pictures;
+    return Icon.ImageViewer;
   }
 
   static windowId = function() {
@@ -50,7 +50,7 @@ function ImageViewer() : WindowContents() constructor {
 function ImageViewerEntry() : StartMenuEntry() constructor {
 
   static getIcon = function() {
-    return Icon.Pictures;
+    return Icon.ImageViewer;
   }
 
   static getName = function() {

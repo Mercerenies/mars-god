@@ -23,7 +23,7 @@ function MediaPlayer() : WindowContents() constructor {
   }
 
   static iconIndex = function() {
-    return Icon.Pictures;
+    return Icon.MediaPlayer;
   }
 
   static windowId = function() {
@@ -58,7 +58,7 @@ function MediaPlayer() : WindowContents() constructor {
 function MediaPlayerEntry() : StartMenuEntry() constructor {
 
   static getIcon = function() {
-    return Icon.Music;
+    return Icon.MediaPlayer;
   }
 
   static getName = function() {

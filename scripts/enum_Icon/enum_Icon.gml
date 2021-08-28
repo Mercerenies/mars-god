@@ -14,4 +14,6 @@ enum Icon {
   Exceed = 11,
   Mail = 12,
   Error = 13,
+  ImageViewer = 14,
+  MediaPlayer = 15,
 }
