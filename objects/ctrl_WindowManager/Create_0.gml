@@ -56,7 +56,7 @@ closeButKeep = function(window) {
 
 close = function(window) {
   closeButKeep(window);
-  instance_destroy(window);
+  window.alarm[0] = 1;
 }
 
 windowCount = function() {
