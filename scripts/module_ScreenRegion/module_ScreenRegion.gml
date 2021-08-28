@@ -22,4 +22,6 @@ ScreenRegion.mouseIn = function() {
 #macro ICON_HEIGHT 20
 
 #macro TASKBAR_CELL_WIDTH 128
-#macro TASKBAR_CELL_HEIGHT 24
+#macro TASKBAR_CELL_HEIGHT 28
+
+#macro TASKBAR_PADDING 8

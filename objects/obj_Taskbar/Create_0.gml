@@ -1,0 +1,26 @@
+
+currentCellWidth = function() {
+  var total_available_space = ScreenRegion.RIGHT - ScreenRegion.LEFT - TASKBAR_PADDING * 2;
+  var window_count = ctrl_WindowManager.windowCount();
+  var max_possible_width = total_available_space / max(window_count, 1) - TASKBAR_PADDING;
+  return min(max_possible_width, TASKBAR_CELL_WIDTH);
+}
+
+cellStartX = function(cell_index) {
+  var xx = x + 4;
+  var total_w = currentCellWidth() + TASKBAR_PADDING;
+  return xx + total_w * cell_index;
+}
+
+cellStartY = function(cell_index) {
+  return y + 4;
+}
+
+
+cellEndX = function(cell_index) {
+  return cellStartX(cell_index) + currentCellWidth();
+}
+
+cellEndY = function(cell_index) {
+  return y + TASKBAR_CELL_HEIGHT;
+}
