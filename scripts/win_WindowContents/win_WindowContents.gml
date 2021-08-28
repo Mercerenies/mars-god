@@ -14,4 +14,8 @@ function WindowContents() constructor {
     return 128;
   }
 
+  static iconIndex = function() {
+    return Icon.Null;
+  }
+
 }

@@ -15,3 +15,11 @@ ScreenRegion.pointIn = function(xx, yy) {
 ScreenRegion.mouseIn = function() {
   return ScreenRegion.pointIn(mouse_x, mouse_y);
 }
+
+// Sizing macros
+
+#macro ICON_WIDTH 20
+#macro ICON_HEIGHT 20
+
+#macro TASKBAR_CELL_WIDTH 128
+#macro TASKBAR_CELL_HEIGHT 24

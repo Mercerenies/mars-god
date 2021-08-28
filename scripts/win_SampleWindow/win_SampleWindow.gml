@@ -15,4 +15,8 @@ function SampleWindow(title) : WindowContents() constructor {
     return 120;
   }
 
+  static iconIndex = function() {
+    return Icon.Sample;
+  }
+
 }

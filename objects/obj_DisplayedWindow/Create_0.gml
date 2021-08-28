@@ -49,10 +49,16 @@ draw = function() {
   draw_sprite_stretched(titlebar, 1, x + sprwidth, y, w - sprwidth * 2, sprheight);
   draw_sprite(titlebar, 2, x + w - sprwidth, y);
 
+  // Icon
+  var icon_index = window_body.iconIndex();
+  draw_sprite(spr_Icon, icon_index, x + 2, y + 2);
+
+  // Caption Text
   draw_set_font(fnt_Titlebar);
-  var titletext = Util.truncateText(window_body.windowTitle(), getTotalWidth() - 8);
+  var space_for_title = getTotalWidth() - ICON_WIDTH;
+  var titletext = Util.truncateText(window_body.windowTitle(), space_for_title - 8);
   draw_set_color(Colors.WHITE);
-  draw_text(x + 4, y + 4, titletext);
+  draw_text(x + 4 + ICON_WIDTH, y + 4, titletext);
 
   // Border
   draw_set_color(Colors.WHITE);
