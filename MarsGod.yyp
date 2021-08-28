@@ -30,6 +30,7 @@
     {"id":{"name":"scr_Folder","path":"scripts/scr_Folder/scr_Folder.yy",},"order":0,},
     {"id":{"name":"spr_Image_Example1","path":"sprites/spr_Image_Example1/spr_Image_Example1.yy",},"order":1,},
     {"id":{"name":"spr_CalculatorButton","path":"sprites/spr_CalculatorButton/spr_CalculatorButton.yy",},"order":7,},
+    {"id":{"name":"win_ErrorBox","path":"scripts/win_ErrorBox/win_ErrorBox.yy",},"order":9,},
     {"id":{"name":"spr_ButtonClose","path":"sprites/spr_ButtonClose/spr_ButtonClose.yy",},"order":0,},
     {"id":{"name":"win_FileManager","path":"scripts/win_FileManager/win_FileManager.yy",},"order":3,},
     {"id":{"name":"scr_CloseButton","path":"scripts/scr_CloseButton/scr_CloseButton.yy",},"order":4,},

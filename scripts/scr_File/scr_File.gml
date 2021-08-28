@@ -167,7 +167,7 @@ function ImageFile(name, size, sprite) : File() constructor {
 function MediaFile(name, size, audio) : File() constructor {
   _name = name;
   _size = size;
-  _audio = audio
+  _audio = audio;
 
   static getBaseName = function() {
     return _name;
@@ -188,6 +188,15 @@ function MediaFile(name, size, audio) : File() constructor {
   static openFile = function() {
     var mgr = Windows.addOrFindWindow(new MediaPlayer(), 200, 82, -1, -1);
     mgr.window_body.openFile(self);
+  }
+
+}
+
+function FakeMediaFile(name, size, sprite) : MediaFile(name, size, noone) constructor {
+  _sprite = sprite;
+
+  static getSprite = function() {
+    return _sprite;
   }
 
 }

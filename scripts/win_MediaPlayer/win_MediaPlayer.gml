@@ -142,7 +142,7 @@ function _MediaPlayer_PlayButton(owner) : SpriteButton() constructor {
     if (audio_exists(file)) {
       audio_play_sound(file, 0, false);
     } else {
-      /////
+      showErrorBox("Unknown error reading media file!");
     }
   }
 

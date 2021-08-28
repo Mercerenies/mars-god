@@ -13,4 +13,5 @@ enum Icon {
   Powerline = 10,
   Exceed = 11,
   Mail = 12,
+  Error = 13,
 }

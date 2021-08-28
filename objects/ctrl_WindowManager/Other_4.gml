@@ -33,3 +33,6 @@ ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample3.png", 9, spr_Imag
 
 // Sample music
 ctrl_FileSystem.addFile(new Music(), new MediaFile("sample.ogg", 16, snd_Sound_Example));
+
+// Sample videos
+ctrl_FileSystem.addFile(new Videos(), new FakeMediaFile("sample.mp4", 699, spr_Image_Example1));
