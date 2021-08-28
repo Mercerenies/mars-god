@@ -58,3 +58,20 @@ function _SampleWindow_Textbox1(owner) : Textbox() constructor {
   }
 
 }
+
+function _SampleWindow_Textbox2(owner) : PasswordBox() constructor {
+  _owner = owner;
+
+  static xPos = function() {
+    return _owner.getOwner().x + 32;
+  }
+
+  static yPos = function() {
+    return _owner.getOwner().y + 64;
+  }
+
+  static getWidth = function() {
+    return 128;
+  }
+
+}

@@ -40,7 +40,7 @@ minimize = function(window) {
   }
 }
 
-close = function(window) {
+closeButKeep = function(window) {
   minimize(window);
   var index = -1;
   for (var i = 0; i < ds_list_size(original_order); i++) {
@@ -52,6 +52,11 @@ close = function(window) {
   if (index >= 0) {
     ds_list_delete(original_order, index);
   }
+}
+
+close = function(window) {
+  closeButKeep(window);
+  instance_destroy(window);
 }
 
 windowCount = function() {

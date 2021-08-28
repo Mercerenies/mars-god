@@ -23,6 +23,7 @@
     {"id":{"name":"spr_Luna","path":"sprites/spr_Luna/spr_Luna.yy",},"order":1,},
     {"id":{"name":"obj_MarsTitleSplash","path":"objects/obj_MarsTitleSplash/obj_MarsTitleSplash.yy",},"order":2,},
     {"id":{"name":"scripts_Cursor","path":"scripts/scripts_Cursor/scripts_Cursor.yy",},"order":2,},
+    {"id":{"name":"scr_PasswordBox","path":"scripts/scr_PasswordBox/scr_PasswordBox.yy",},"order":1,},
     {"id":{"name":"obj_DisplayedWindow","path":"objects/obj_DisplayedWindow/obj_DisplayedWindow.yy",},"order":3,},
     {"id":{"name":"spr_FolderSplash","path":"sprites/spr_FolderSplash/spr_FolderSplash.yy",},"order":3,},
     {"id":{"name":"spr_Cursor","path":"sprites/spr_Cursor/spr_Cursor.yy",},"order":0,},
