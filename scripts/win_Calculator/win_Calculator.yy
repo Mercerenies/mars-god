@@ -6,7 +6,7 @@
     "path": "folders/Screen/Windows.yy",
   },
   "resourceVersion": "1.0",
-  "name": "win_SampleWindow",
+  "name": "win_Calculator",
   "tags": [],
   "resourceType": "GMScript",
 }

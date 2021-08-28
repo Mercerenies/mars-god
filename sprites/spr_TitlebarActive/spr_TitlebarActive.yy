@@ -156,8 +156,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Window",
-    "path": "folders/Screen/Window.yy",
+    "name": "WindowInfrastructure",
+    "path": "folders/Screen/WindowInfrastructure.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_TitlebarActive",

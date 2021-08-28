@@ -18,7 +18,7 @@ function Textbox() constructor {
   }
 
   static mouseDown = function() {
-    if ((mouseWithin()) && (isEditable)) {
+    if ((mouseWithin()) && (isEditable())) {
       _focused = true;
       ctrl_Screen.resetCaretTick();
       keyboard_string = _text;

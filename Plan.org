@@ -172,3 +172,5 @@
    Win a game of Minebroomer.
 ** KING OF GAMES (KOG)
    Win a round of each game available.
+** NUMBERS THAT COUNT (NTC)
+   Exceed some limit in the calculator
