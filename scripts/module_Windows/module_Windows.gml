@@ -25,6 +25,7 @@ Windows.createWindow = function(body, xx, yy, w, h) {
 Windows.addNewWindow = function(body, xx, yy, w, h) {
   var window = Windows.createWindow(body, xx, yy, w, h);
   ctrl_WindowManager.addWindow(window);
+  return window;
 }
 
 Windows.addOrFindWindow = function(body, xx, yy, w, h) {
@@ -32,7 +33,8 @@ Windows.addOrFindWindow = function(body, xx, yy, w, h) {
   var existing = ctrl_WindowManager.findWindowById(id_);
   if (!is_undefined(existing)) {
     ctrl_WindowManager.moveToFront(existing);
+    return existing;
   } else {
-    Windows.addNewWindow(body, xx, yy, w, h);
+    return Windows.addNewWindow(body, xx, yy, w, h);
   }
 }

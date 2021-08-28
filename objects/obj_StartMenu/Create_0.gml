@@ -31,7 +31,7 @@ mouseDown = function() {
     // No highlight
   } else if (highlighted == 0) {
     // Up arrow
-  } else if (highlighted == cellCount() - 12) {
+  } else if (highlighted == cellCount() - 1) {
     // Down arrow
   } else {
     // Regular button

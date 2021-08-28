@@ -21,8 +21,10 @@
     {"id":{"name":"spr_Screen","path":"sprites/spr_Screen/spr_Screen.yy",},"order":3,},
     {"id":{"name":"obj_StartMenu","path":"objects/obj_StartMenu/obj_StartMenu.yy",},"order":1,},
     {"id":{"name":"spr_OfficeSpaceSplash","path":"sprites/spr_OfficeSpaceSplash/spr_OfficeSpaceSplash.yy",},"order":1,},
+    {"id":{"name":"scr_Folder","path":"scripts/scr_Folder/scr_Folder.yy",},"order":0,},
     {"id":{"name":"spr_CalculatorButton","path":"sprites/spr_CalculatorButton/spr_CalculatorButton.yy",},"order":7,},
     {"id":{"name":"spr_ButtonClose","path":"sprites/spr_ButtonClose/spr_ButtonClose.yy",},"order":0,},
+    {"id":{"name":"win_FileManager","path":"scripts/win_FileManager/win_FileManager.yy",},"order":3,},
     {"id":{"name":"scr_CloseButton","path":"scripts/scr_CloseButton/scr_CloseButton.yy",},"order":4,},
     {"id":{"name":"spr_MainGameBackground","path":"sprites/spr_MainGameBackground/spr_MainGameBackground.yy",},"order":0,},
     {"id":{"name":"scr_StartButton","path":"scripts/scr_StartButton/scr_StartButton.yy",},"order":9,},
@@ -93,6 +95,7 @@
     {"folderPath":"folders/Screen/Textbox.yy","order":11,"resourceVersion":"1.0","name":"Textbox","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Screen/Windows.yy","order":12,"resourceVersion":"1.0","name":"Windows","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Screen/StartMenu.yy","order":13,"resourceVersion":"1.0","name":"StartMenu","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Screen/FileSystem.yy","order":14,"resourceVersion":"1.0","name":"FileSystem","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
