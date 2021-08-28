@@ -18,8 +18,8 @@ moveToFront = function(window) {
   }
   if (index >= 0) {
     ds_list_delete(z_order, index);
-    ds_list_add(z_order, window.id);
   }
+  ds_list_add(z_order, window.id);
 }
 
 isActiveWindow = function(window) {
@@ -27,8 +27,25 @@ isActiveWindow = function(window) {
   return (size > 0) && (z_order[| size - 1] == window.id);
 }
 
+minimize = function(window) {
+  var index = -1;
+  for (var i = 0; i < ds_list_size(z_order); i++) {
+    if (z_order[| i] == window.id) {
+      index = i;
+      break;
+    }
+  }
+  if (index >= 0) {
+    ds_list_delete(z_order, index);
+  }
+}
+
 windowCount = function() {
   return ds_list_size(original_order);
+}
+
+activeWindowCount = function() {
+  return ds_list_size(z_order);
 }
 
 // DEBUG CODE

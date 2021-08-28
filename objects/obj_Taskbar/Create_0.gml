@@ -24,3 +24,27 @@ cellEndX = function(cell_index) {
 cellEndY = function(cell_index) {
   return y + TASKBAR_CELL_HEIGHT;
 }
+
+// Mouse down
+mouseDown = function() {
+  var windows = ctrl_WindowManager.original_order;
+  for (var index = 0; index < ds_list_size(windows); index++) {
+    var x1 = cellStartX(index);
+    var y1 = cellStartY(index);
+    var x2 = cellEndX(index);
+    var y2 = cellEndY(index);
+
+    if (point_in_rectangle(cursor_x(), cursor_y(), x1, y1, x2, y2)) {
+      var window = windows[| index];
+      if (ctrl_WindowManager.isActiveWindow(window)) {
+        // Already active; minimize
+        ctrl_WindowManager.minimize(window);
+      } else {
+        // Not active; move to front
+        ctrl_WindowManager.moveToFront(window);
+      }
+      break;
+    }
+
+  }
+}
