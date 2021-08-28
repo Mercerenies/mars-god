@@ -82,7 +82,7 @@ function Listbox() constructor {
 
   static mouseDown = function() {
     var highlighted = highlightedCell();
-    if (highlighted >= 0) {
+    if ((highlighted >= 0) && (highlighted < getTextFieldCount())) {
       onClick(highlighted);
     }
   }

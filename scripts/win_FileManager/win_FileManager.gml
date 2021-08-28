@@ -53,13 +53,11 @@ function FileManagerEntry(folder) : StartMenuEntry() constructor {
   }
 
   static onClick = function() {
-    var mgr = Windows.addOrFindWindow(new FileManager(), 96, 96, -1, -1);
+    var mgr = Windows.addOrFindWindow(new FileManager(), 128, 104, -1, -1);
     mgr.window_body.navigateToFolder(_folder);
   }
 
 }
-
-// TODO Other entries
 
 function _FileManager_FolderNameBox(owner) : Textbox() constructor {
   _owner = owner;
@@ -140,7 +138,7 @@ function _FileManager_FileListbox(owner) : Listbox() constructor {
   }
 
   static getWidth = function() {
-    return 352;
+    return 360;
   }
 
   static getHeight = function() {
@@ -163,6 +161,8 @@ function _FileManager_FileListbox(owner) : Listbox() constructor {
     return ds_list_size(_getFolder());
   }
 
-  static onClick = function(idx) {}
+  static onClick = function(idx) {
+    _getFolder()[| idx].openFile();
+  }
 
 }

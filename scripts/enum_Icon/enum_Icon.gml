@@ -9,4 +9,7 @@ enum Icon {
   Music = 6,
   Pictures = 7,
   Videos = 8,
+  Letter = 9,
+  Powerline = 10,
+  Exceed = 11,
 }

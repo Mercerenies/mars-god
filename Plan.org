@@ -145,8 +145,10 @@
 * SOFTWARE
 ** DISCO YABBER
    Instant messaging service
-** MACROSOFT OFFICE (LETTER / EXCEED / POWERLINE)
+** MACROSOFT OFFICE LETTER
    Office suite (Stapley the Stapler)
+** MACROSOFT OFFICE EXCEED
+** MACROSOFT OFFICE POWERLINE
 ** FIREDOG
    Web browser
 ** MAIL
@@ -154,8 +156,12 @@
 ** DONE FILE EXPLORER
 ** CAMERA
 ** MINEBROOMER
-** CREDITS (?)
+** CREDITS (also as .png? or as .ppt?)
 ** ACHIEVEMENTS
+** COMPRESSION TOOL (?)
+** IMAGE VIEWER
+** MEDIA PLAYER
+** PACKERMAN (?)
 * WEBSITES
 ** josephlawfirm.com
 ** romangods.com
@@ -180,3 +186,5 @@
    Have too many windows open.
 ** PRESSURE IS ON (PIO)
    Compress a file to less than 0 MB.
+** STUDIOUSLY EDUCATED EMPLOYEE (SEE)
+   Watch the new employee brief in Macrosoft Powerline.

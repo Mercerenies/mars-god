@@ -49,3 +49,28 @@ function DebugExampleFile(name, size) : File() constructor {
   }
 
 }
+
+function TextFile(name, size, contents) : File() constructor {
+  _name = name;
+  _size = size;
+  _contents = contents;
+
+  static getBaseName = function() {
+    return _name;
+  }
+
+  static getBaseSize = function() {
+    return _size;
+  }
+
+  static getContents = function() {
+    return _contents;
+  }
+
+  static openFile = function() {
+    var mgr = Windows.addOrFindWindow(new MacrosoftLetter(), 128, 128, -1, -1);
+    mgr.window_body.openFile(self);
+  }
+
+}
+
