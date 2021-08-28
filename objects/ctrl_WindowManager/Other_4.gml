@@ -2,6 +2,7 @@
 // Start Menu Initialization
 obj_StartMenu.addEntry(new CalculatorEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Documents()));
+obj_StartMenu.addEntry(new ImageViewerEntry());
 obj_StartMenu.addEntry(new MacrosoftLetterEntry());
 obj_StartMenu.addEntry(new MacrosoftPowerlineEntry());
 obj_StartMenu.addEntry(new MailManagerEntry());
@@ -23,3 +24,8 @@ ctrl_FileSystem.addFile(new Documents(), new SlideshowFile("slides.ppt", 8, spr_
 // Sample emails
 ctrl_FileSystem.addFile(new Mail(), new MailFile("Sender Name", "Subject Line", "This is an email."));
 ctrl_FileSystem.addFile(new Mail(), new MailFile("Mercerenies", "Hello :)", "Welcome to my game!"));
+
+// Sample pics
+ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample1.png", 10, spr_Image_Example1));
+ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample2.png", 9, spr_Image_Example2));
+ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample3.png", 9, spr_Image_Example3));

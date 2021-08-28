@@ -140,3 +140,26 @@ function MailFile(sender, subject, text) : File() constructor {
 
 }
 
+function ImageFile(name, size, sprite) : File() constructor {
+  _name = name;
+  _size = size;
+  _sprite = sprite;
+
+  static getBaseName = function() {
+    return _name;
+  }
+
+  static getBaseSize = function() {
+    return _size;
+  }
+
+  static getSprite = function() {
+    return _sprite;
+  }
+
+  static openFile = function() {
+    var mgr = Windows.addOrFindWindow(new ImageViewer(), 201, 96, -1, -1);
+    mgr.window_body.openFile(self);
+  }
+
+}

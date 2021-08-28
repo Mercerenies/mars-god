@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Slideshows",
-    "path": "folders/Screen/Slideshows.yy",
+    "name": "FileResources",
+    "path": "folders/Screen/FileResources.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Slideshow_Example",
