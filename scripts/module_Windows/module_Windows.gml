@@ -9,6 +9,7 @@ Windows.createWindow = function(body, xx, yy, w, h) {
   var obj = instance_create_layer(xvalue, yvalue, "Instances_Windows", obj_DisplayedWindow);
   with (obj) {
     window_body = body;
+    body.setOwner(self.id);
     width = w;
     if (width < 0) {
       width = body.desiredWidth();

@@ -4,3 +4,5 @@ if (ScreenRegion.mouseIn()) {
 } else {
   window_set_cursor(cr_default);
 }
+
+caret_tick += 1;

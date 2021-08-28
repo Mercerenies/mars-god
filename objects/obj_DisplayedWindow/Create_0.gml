@@ -21,6 +21,22 @@ getTotalHeight = function() {
   return height + 2 + sprite_get_height(spr_TitlebarActive);
 }
 
+getContentX = function() {
+  return x + 4;
+}
+
+getContentY = function() {
+  return y + 2 + sprite_get_height(spr_TitlebarActive);
+}
+
+getContentWidth = function() {
+  return width;
+}
+
+getContentHeight = function() {
+  return height;
+}
+
 pointInTitlebar = function(xx, yy) {
   return point_in_rectangle(xx, yy, x, y, x + getTotalWidth(), y + sprite_get_height(spr_TitlebarActive));
 }
@@ -46,6 +62,7 @@ draw = function() {
   // Contents
   draw_set_color(Colors.GRAY);
   draw_rectangle(x + 1, y + 1, x + w - 1, y + h - 1, false);
+  window_body.draw();
 
   // Titlebar
   draw_sprite(titlebar, 0, x, y);
@@ -86,7 +103,14 @@ mouseDown = function() {
       anchor_x = cursor_x() - x;
       anchor_y = cursor_y() - y;
     }
+  } else {
+    window_body.mouseDown();
   }
+}
+
+// Global mouse down
+gMouseDown = function() {
+  window_body.gMouseDown();
 }
 
 // Mouse up
@@ -97,6 +121,7 @@ gMouseUp = function() {
   close_button.gMouseUp();
   min_button.gMouseUp();
   anchor_dragging = false;
+  window_body.gMouseUp();
 }
 
 // Step (only called if not minimized)
@@ -108,5 +133,7 @@ step = function() {
 
   x = clamp(x, ScreenRegion.LEFT - getTotalWidth() + 64, ScreenRegion.RIGHT - 64);
   y = clamp(y, ScreenRegion.TOP - 8, ScreenRegion.BOTTOM - 96);
+
+  window_body.step();
 
 }

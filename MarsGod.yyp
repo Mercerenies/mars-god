@@ -37,6 +37,7 @@
     {"id":{"name":"scr_Button","path":"scripts/scr_Button/scr_Button.yy",},"order":2,},
     {"id":{"name":"module_Colors","path":"scripts/module_Colors/module_Colors.yy",},"order":2,},
     {"id":{"name":"spr_Null","path":"sprites/spr_Null/spr_Null.yy",},"order":5,},
+    {"id":{"name":"scr_Textbox","path":"scripts/scr_Textbox/scr_Textbox.yy",},"order":0,},
     {"id":{"name":"spr_BossSplash","path":"sprites/spr_BossSplash/spr_BossSplash.yy",},"order":5,},
     {"id":{"name":"obj_SplashLightning","path":"objects/obj_SplashLightning/obj_SplashLightning.yy",},"order":5,},
     {"id":{"name":"module_Windows","path":"scripts/module_Windows/module_Windows.yy",},"order":3,},
@@ -77,6 +78,7 @@
     {"folderPath":"folders/Screen/Fonts.yy","order":7,"resourceVersion":"1.0","name":"Fonts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Screen/Icon.yy","order":9,"resourceVersion":"1.0","name":"Icon","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Screen/Button.yy","order":10,"resourceVersion":"1.0","name":"Button","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Screen/Textbox.yy","order":11,"resourceVersion":"1.0","name":"Textbox","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
