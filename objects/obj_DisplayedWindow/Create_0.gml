@@ -102,6 +102,8 @@ draw = function() {
 mouseDown = function() {
   close_button.event("gMouseDown");
   min_button.event("gMouseDown");
+  close_button.event("mouseDown");
+  min_button.event("mouseDown");
   if (pointInTitlebar(cursor_x(), cursor_y())) {
     if ((!close_button.mouseWithin()) && (!min_button.mouseWithin())) {
       anchor_dragging = true;
@@ -122,6 +124,8 @@ gMouseDown = function() {
 mouseUp = function() {
   close_button.event("gMouseUp");
   min_button.event("gMouseUp");
+  close_button.event("mouseUp");
+  min_button.event("mouseUp");
   if (!pointInTitlebar(cursor_x(), cursor_y())) {
     window_body.event("mouseUp");
   }
