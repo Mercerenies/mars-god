@@ -1,5 +1,6 @@
 
 active = false;
+entries = ds_list_create();
 
 isActive = function() {
   return active;
@@ -9,8 +10,37 @@ setActive = function(act) {
   active = act;
 }
 
+addEntry = function(entry) {
+  ds_list_add(entries, entry);
+}
+
+getEntry = function(idx) {
+  if ((idx < 0) || (idx >= ds_list_size(entries))) {
+    return undefined;
+  }
+  return entries[| idx];
+}
+
 event = function(ev) {
   Events.callOn(self, ev);
+}
+
+mouseDown = function() {
+  var highlighted = highlightedCell();
+  if (highlighted < 0) {
+    // No highlight
+  } else if (highlighted == 0) {
+    // Up arrow
+  } else if (highlighted == cellCount() - 12) {
+    // Down arrow
+  } else {
+    // Regular button
+    var entry = getEntry(cellToEntryIndex(highlighted));
+    if (!is_undefined(entry)) {
+      entry.onClick();
+      setActive(false);
+    }
+  }
 }
 
 gMouseUp = function() {
@@ -38,6 +68,10 @@ cellX = function(idx) {
 
 cellY = function(idx) {
   return y + 12 + idx * cellHeight();
+}
+
+cellToEntryIndex = function(idx) {
+  return idx - 1;
 }
 
 highlightedCell = function() {

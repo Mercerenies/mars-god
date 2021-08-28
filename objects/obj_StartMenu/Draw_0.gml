@@ -28,8 +28,11 @@ for (var idx = 0; idx < cellCount(); idx++) {
     draw_sprite_ext(spr_StartArrow, 1, mean(xx, xx + cellWidth()), yy, 1, 1, 0, fgcolor, 1);
   } else {
     // Other
-    draw_sprite(spr_Icon, Icon.Sample, xx + 2, yy + 2);
-    draw_text(xx + 4 + ICON_WIDTH, yy + 2, "Sample Text");
+    var entry = getEntry(cellToEntryIndex(idx));
+    if (!is_undefined(entry)) {
+      draw_sprite(spr_Icon, entry.getIcon(), xx + 2, yy + 2);
+      draw_text(xx + 4 + ICON_WIDTH, yy + 2, entry.getName());
+    }
   }
 
 }
