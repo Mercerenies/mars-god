@@ -29,9 +29,13 @@ pointIn = function(xx, yy) {
 // "Draw" Event
 draw = function() {
 
-  var titlebar = spr_TitlebarActive;
+  var titlebar = spr_TitlebarInactive;
   var sprwidth = sprite_get_width(titlebar);
   var sprheight = sprite_get_height(titlebar);
+
+  if (ctrl_WindowManager.isActiveWindow(self)) {
+    titlebar = spr_TitlebarActive;
+  }
 
   var w = getTotalWidth();
   var h = getTotalHeight();
@@ -46,8 +50,9 @@ draw = function() {
   draw_sprite(titlebar, 2, x + w - sprwidth, y);
 
   draw_set_font(fnt_Titlebar);
+  var titletext = Util.truncateText(window_body.windowTitle(), getTotalWidth() - 8);
   draw_set_color(Colors.WHITE);
-  draw_text(x + 4, y + 4, window_body.windowTitle());
+  draw_text(x + 4, y + 4, titletext);
 
   // Border
   draw_set_color(Colors.WHITE);

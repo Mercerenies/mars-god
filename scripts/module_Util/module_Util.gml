@@ -17,3 +17,25 @@ Util.toward = function(curr, target, spd) {
   else
     return curr + sign(target - curr) * spd;
 }
+
+Util.drawRaisedBox = function(x1, y1, x2, y2) {
+  draw_set_color(Colors.WHITE);
+  draw_line(x1, y1, x2, y1);
+  draw_line(x1, y1, x1, y2);
+  draw_set_color(Colors.BLACK);
+  draw_line(x2, y1, x2, y2);
+  draw_line(x1, y2, x2, y2);
+}
+
+Util.truncateText = function(text, width) {
+  if (string_width(text) < width) {
+    return text;
+  }
+  var trunc_text = "";
+  for (var index = 1; index <= string_length(text); index++) {
+    var ch = string_copy(text, index, 1);
+    if (string_width(trunc_text + ch + "...") >= width)
+      return trunc_text + "...";
+    trunc_text += ch;
+  }
+}

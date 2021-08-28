@@ -1,9 +1,10 @@
 
 // Parent class for window objects
-function SampleWindow() : WindowContents() constructor {
+function SampleWindow(title) : WindowContents() constructor {
+  _title = title;
 
   static windowTitle = function() {
-    return "Sample Window";
+    return _title;
   }
 
   static desiredWidth = function() {
