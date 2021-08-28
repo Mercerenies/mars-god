@@ -22,6 +22,10 @@ function Listbox() constructor {
     return fnt_Titlebar;
   }
 
+  static getOwner = function() {
+    return undefined;
+  }
+
   static getLineHeight = function() {
     draw_set_font(getFont());
     return string_height("M");
@@ -48,6 +52,8 @@ function Listbox() constructor {
     return 0;
   }
 
+  static onClick = function(idx) {}
+
   static cellX = function(idx) {
     return xPos() + 2;
   }
@@ -60,7 +66,30 @@ function Listbox() constructor {
     Events.callOn(self, ev);
   }
 
+  highlightedCell = function() {
+    if (!ctrl_WindowManager.isActiveWindow(getOwner().getOwner())) {
+      return -1;
+    }
+    var cx = cursor_x();
+    var cy = cursor_y();
+    for (var idx = 0; idx < cellCount(); idx++) {
+      if (point_in_rectangle(cx, cy, cellX(idx), cellY(idx), cellX(idx) + cellWidth(), cellY(idx) + cellHeight())) {
+        return idx;
+      }
+    }
+    return -1;
+  }
+
+  static mouseDown = function() {
+    var highlighted = highlightedCell();
+    if (highlighted >= 0) {
+      onClick(highlighted);
+    }
+  }
+
   static draw = function() {
+
+    var highlighted = highlightedCell();
 
     var x1 = xPos();
     var y1 = yPos();
@@ -74,9 +103,17 @@ function Listbox() constructor {
     for (var idx = 0; idx < fields_to_show; idx++) {
       var xx = cellX(idx);
       var yy = cellY(idx);
+
+      var fgcolor = Colors.BLACK;
+      if (highlighted == idx) {
+        fgcolor = Colors.WHITE;
+        draw_set_color(Colors.BLUE);
+        draw_rectangle(xx, yy, xx + cellWidth(), yy + cellHeight(), false);
+      }
+
       var field = getTextField(idx);
       draw_set_font(getFont());
-      draw_set_color(c_black);
+      draw_set_color(fgcolor);
       draw_text(xx, yy, field);
     }
 

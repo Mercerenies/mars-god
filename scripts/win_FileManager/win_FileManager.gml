@@ -104,12 +104,20 @@ function _FileManager_FolderListbox(owner) : Listbox() constructor {
     return 160;
   }
 
+  static getOwner = function() {
+    return _owner;
+  }
+
   static getTextField = function(idx) {
     return _fields[idx].getName();
   }
 
   static getTextFieldCount = function() {
     return array_length(_fields);
+  }
+
+  static onClick = function(idx) {
+    _owner.navigateToFolder(_fields[idx]);
   }
 
 }
