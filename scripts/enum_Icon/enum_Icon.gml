@@ -16,4 +16,5 @@ enum Icon {
   Error = 13,
   ImageViewer = 14,
   MediaPlayer = 15,
+  Camera = 16,
 }
