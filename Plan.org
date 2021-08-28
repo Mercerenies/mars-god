@@ -1,0 +1,168 @@
+
+* SEQUENCE OF EVENTS
+** STAGE 1
+   The boss recognizes Mars as his new intern. He tells him to go sit
+   at the computer and that he'll send him instructions via message.
+
+   At the computer, the login screen is showing. The username is
+   already picked out, but the password field is blank. Any password
+   will do, and you will be allowed to log into the computer.
+
+   The computer is not allowed to access the Internet yet.
+
+   After a few seconds of idly clicking around, a notification will
+   pop up from Disco Yabber. Your boss has told you to go set up your
+   corporate account at ~josephlawfirm.com~.
+
+   Naturally, ~josephlawfirm.com~ is an obvious "injury lawyer"
+   website. You need to go to the "new hires" tab and set up an
+   account. Again, the username field is already filled in. The
+   password has specific requirements, and the only requirement that
+   will be shown is the first one you fail, so you have to figure them
+   out organically.
+   + Must not contain "password".
+   + Must not contain spaces.
+   + Must contain a capital *and* a lowercase letter.
+   + Must contain an underscore.
+   + Must contain at least one number.
+   + Must contain at least two numbers.
+   + Must contain at least three numbers.
+   + Must contain no more than four numbers.
+   + Must not begin with (whatever character it begins with). This
+     character is decided once when this condition is first triggered,
+     so you'll always fail this one once.
+
+   After you complete this challenge, you'll be in.
+** STAGE 2 (DATA)
+   Your boss messages you telling you to open Macrosoft Exceed and
+   start copying data from one spreadsheet to the other. The data
+   copying must be exact or it won't count. (Note: Trying to do this
+   before Stage 2 will result in a failed Internet connection)
+
+   This is the first encounter with Stapley. Stapley will try (and
+   fail) to help you with everything.
+
+   You must do the data entry minigame for at least some number of
+   entries. After that, we move to Stage 3.
+** STAGE 3
+   Your boss will message you telling you to continue doing that for
+   eight hours. He'll emphasize that you shouldn't get distracted or
+   do anything else. Specifically, you *definitely* shouldn't go look
+   in your Documents folder.
+
+   You can continue doing the data entry minigame for as long as you
+   like (possible achievement?), but your next task involves,
+   naturally, the Documents folder. Go to the Documents folder, where
+   you'll find a doc file. That file doesn't exist before Stage 3.
+   That doc file reads: "I think I left something important at
+   romangods.com".
+
+   ~romangods.com~ is an unsafe site. The browser will warn you to
+   stay away from it. You need to tell it to go ahead anyway. Several
+   times. Even Stapley will show up and warn you. Once you (finally)
+   arrive at the site, you'll be able to navigate a bit and eventually
+   download a file called "something important". (You cannot reach the
+   site before Stage 3) This file goes to your downloads. Upon
+   attempting to open it, you'll be told the file is encrypted. End of
+   Stage 3.
+** STAGE 4 (DATA)
+   Once you've attempted to open the file, you'll get a message from
+   your boss telling you to do more work. You have to do a bit more
+   data entry to continue. After that, you'll get a message from
+   Minerva on Disco.
+** STAGE 5
+   It's a garbled message that says "Mars ... trapped on earth ...
+   trying to reach ... email".
+
+   You need to check your email. Among the various emails in the
+   inbox, one is from Minerva (this message does not exist before
+   Stage 5). It's a fuller form of the Disco message. It says "Mars,
+   you've got to listen to me. You fell into a hole and now you're
+   trapped on earth! Reply to this message if you see it!" Reply to
+   the email to continue.
+** STAGE 6 (DATA)
+   More data entry, at the urging of your boss. As we proceed, the
+   data entry fields focus more and more on text like "wake up" and
+   "you're dreaming".
+** STAGE 7
+   You will get a reply from Minerva in your email inbox. It asks if
+   you found the file on ~romangods.com~ yet. If you did, then it says
+   the encryption password is on the same site somewhere.
+
+   You need to go back to the site. As of Stage 7, there will be a
+   footnote at the bottom that says "Encryption Password". Seeing the
+   password moves to Stage 8.
+** STAGE 8
+   Use that password to unlock the encrypted file (as before, if you
+   try to use the right password before Stage 8, you won't be able
+   to). The file is a music file. It plays audio from Minerva, telling
+   you to make an account on ~romangods.com~.
+** STAGE 9
+   The website ~romangods.com~ has a login page. But it simply tells
+   you they have too many people logging in and to go join the
+   waitlist. You could have done that at any point, but you're
+   required to do it now. Once on the waitlist, we move to Stage 10.
+** STAGE 10 (DATA)
+   The boss tells you to do more data entry. Do it.
+** STAGE 11
+   An email comes in from ~romangods.com~ telling you to go make an
+   account. You can make an account. In order to do so, you need to
+   come up with a username and password. The password requirements on
+   this site are not stringent like before, so anything will do. Next,
+   you must upload a picture of yourself. There are a handful of
+   pictures in the Pictures folder, but none will do. You need to go
+   to the Camera and take a picture (of Mars). That picture,
+   unfortunately, will be too large. The site will tell you to
+   compress it. You must compress the file several times to get it
+   small enough. Then you upload it and create your account.
+** STAGE 12
+   On ~romangods.com~ (only after being logged in), you can see
+   Wikipedia-style entries for various Roman gods. Most of them are
+   informational and generic, but going to Mars' page reads "wake up
+   wake up wake up wake up". Upon going to that page, a BSOD happens
+   and resets the computer. Move on to Stage 13.
+** STAGE 13 (DATA)
+   After the computer finishes rebooting, you'll get a message from
+   your boss telling you to, naturally, get back to work. Do it. Do
+   more work.
+** STAGE 14
+   One of your coworkers messages you. He says you've been working too
+   hard. He tells you to go and play a game of Minebroomer to cool
+   off. You need to go play Minebroomer. After winning one game or
+   losing three, we move to Stage 15.
+** STAGE 15
+   Minerva messages you once again. She tells you something is keeping
+   you there. A dark, malevolent entity called a "stapler". You need
+   to defeat this entity by clicking on it repeatedly. Of course, this
+   is talking about Stapley the Stapler, who is actually the final
+   boss of the game. Click on Stapley several times, and he'll get
+   angry, trying to consume the screen. Continue clicking to win the
+   game.
+* SOFTWARE
+** DISCO YABBER
+   Instant messaging service
+** MACROSOFT OFFICE (LETTER / EXCEED / POWERLINE)
+   Office suite (Stapley the Stapler)
+** FIREDOG
+   Web browser
+** MAIL
+** CALCULATOR
+** FILE EXPLORER
+** CAMERA
+** MINEBROOMER
+* WEBSITES
+** josephlawfirm.com
+** romangods.com
+** yoyogames.com (?)
+* ACHIEVEMENTS
+** HARD WORKER (HW)
+   Do way more data entry than required.
+** DEGENERATE (D)
+   Open the seemingly explicit file in Videos.
+** DIVIDE BY ZERO (DBZ)
+   Attempt to divide by zero in the calculator program.
+** SECRET MULTIPLAYER (SM)
+   Find the yoyogames.com website and the secret multiplayer within.
+   (time permitting)
+** MINE MASTER (MM)
+   Win a game of Minebroomer.
