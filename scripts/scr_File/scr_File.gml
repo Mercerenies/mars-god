@@ -131,6 +131,8 @@ function MailFile(sender, subject, text) : File() constructor {
     return _text;
   }
 
+  static onReply = function() {}
+
   static openFile = function() {
     var mgr = Windows.addOrFindWindow(new MailViewer(), 240, 102, -1, -1);
     mgr.window_body.openFile(self);

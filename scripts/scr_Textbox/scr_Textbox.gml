@@ -58,7 +58,7 @@ function Textbox() constructor {
     if (_focused && (t == getDisplayText()) && (ctrl_Screen.showCarets())) {
       var caret_x = x1 + 2 + string_width(t);
       if (caret_x < x2) {
-        draw_line(caret_x, y1 + 2, caret_x, y2 - 2);
+        draw_line(caret_x, y1 + 2, caret_x, y1 + 2 + string_height("M"));
       }
     }
 
