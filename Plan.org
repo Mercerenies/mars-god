@@ -131,13 +131,17 @@
    off. You need to go play Minebroomer. After winning one game or
    losing three, we move to Stage 15.
 ** STAGE 15
-   Minerva messages you once again. She tells you something is keeping
-   you there. A dark, malevolent entity called a "stapler". You need
-   to defeat this entity by clicking on it repeatedly. Of course, this
-   is talking about Stapley the Stapler, who is actually the final
-   boss of the game. Click on Stapley several times, and he'll get
-   angry, trying to consume the screen. Continue clicking to win the
-   game.
+   Minerva messages you once again. She tells you that you need to get
+   into the administrator account by logging out of the computer and
+   logging back in under the account name "admin" and "password". Do
+   so.
+** STAGE 16
+   Once there, Minerva messages you again. She tells you something is
+   keeping you there. A dark, malevolent entity. Before the message
+   finishes, Stapley appears and tells you you'll never escape.
+   Stapley the Stapler is actually the final boss of the game. Click
+   on Stapley several times, and he'll get angry, trying to consume
+   the screen. Continue clicking to win the game.
 * SOFTWARE
 ** DISCO YABBER
    Instant messaging service
@@ -166,3 +170,5 @@
    (time permitting)
 ** MINE MASTER (MM)
    Win a game of Minebroomer.
+** KING OF GAMES (KOG)
+   Win a round of each game available.

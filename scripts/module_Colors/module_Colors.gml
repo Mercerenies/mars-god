@@ -1,5 +1,9 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function module_Colors(){
 
-}
+#macro Colors global.__module_Colors
+
+Colors = {};
+
+Colors.BLUE = make_color_rgb(101, 101, 255);
+Colors.GRAY = make_color_rgb(178, 178, 178);
+Colors.WHITE = c_white;
+Colors.BLACK = c_black;

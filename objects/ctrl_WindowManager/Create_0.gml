@@ -1,2 +1,2 @@
 // DEBUG CODE
-instance_create_layer(ScreenRegion.LEFT + 64, ScreenRegion.TOP + 64, "Instances_Windows", obj_DisplayedWindow);
+Windows.createWindow(new SampleWindow(), 64, 64, -1, -1);

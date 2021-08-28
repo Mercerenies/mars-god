@@ -1,4 +1,4 @@
 
 with (obj_DisplayedWindow) {
-  draw();
+  step();
 }
