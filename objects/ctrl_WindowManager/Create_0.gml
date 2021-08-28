@@ -40,6 +40,20 @@ minimize = function(window) {
   }
 }
 
+close = function(window) {
+  minimize(window);
+  var index = -1;
+  for (var i = 0; i < ds_list_size(original_order); i++) {
+    if (original_order[| i] == window.id) {
+      index = i;
+      break;
+    }
+  }
+  if (index >= 0) {
+    ds_list_delete(original_order, index);
+  }
+}
+
 windowCount = function() {
   return ds_list_size(original_order);
 }

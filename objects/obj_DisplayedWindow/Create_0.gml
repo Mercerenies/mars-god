@@ -10,6 +10,9 @@ anchor_dragging = false;
 anchor_x = 0;
 anchor_y = 0;
 
+close_button = new CloseButton(id);
+min_button = new MinButton(id);
+
 getTotalWidth = function() {
   return width + 4;
 }
@@ -55,10 +58,14 @@ draw = function() {
 
   // Caption Text
   draw_set_font(fnt_Titlebar);
-  var space_for_title = getTotalWidth() - ICON_WIDTH;
+  var space_for_title = getTotalWidth() - ICON_WIDTH * 3 - 8;
   var titletext = Util.truncateText(window_body.windowTitle(), space_for_title - 8);
   draw_set_color(Colors.WHITE);
   draw_text(x + 4 + ICON_WIDTH, y + 4, titletext);
+
+  // Caption Buttons
+  close_button.draw();
+  min_button.draw();
 
   // Border
   draw_set_color(Colors.WHITE);
@@ -71,10 +78,14 @@ draw = function() {
 
 // Mouse down
 mouseDown = function() {
+  close_button.gMouseDown();
+  min_button.gMouseDown();
   if (pointInTitlebar(cursor_x(), cursor_y())) {
-    anchor_dragging = true;
-    anchor_x = cursor_x() - x;
-    anchor_y = cursor_y() - y;
+    if ((!close_button.mouseWithin()) && (!min_button.mouseWithin())) {
+      anchor_dragging = true;
+      anchor_x = cursor_x() - x;
+      anchor_y = cursor_y() - y;
+    }
   }
 }
 
@@ -83,6 +94,8 @@ mouseUp = function() {}
 
 // Global mouse up
 gMouseUp = function() {
+  close_button.gMouseUp();
+  min_button.gMouseUp();
   anchor_dragging = false;
 }
 
