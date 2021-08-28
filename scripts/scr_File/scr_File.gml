@@ -74,3 +74,31 @@ function TextFile(name, size, contents) : File() constructor {
 
 }
 
+function SlideshowFile(name, size, sprite) : File() constructor {
+  _name = name;
+  _size = size;
+  _sprite = sprite;
+
+  static getBaseName = function() {
+    return _name;
+  }
+
+  static getBaseSize = function() {
+    return _size;
+  }
+
+  static getSprite = function() {
+    return _sprite;
+  }
+
+  static getSlideCount = function() {
+    return sprite_get_number(_sprite);
+  }
+
+  static openFile = function() {
+    var mgr = Windows.addOrFindWindow(new MacrosoftPowerline(), 156, 140, -1, -1);
+    mgr.window_body.openFile(self);
+  }
+
+}
+
