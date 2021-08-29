@@ -89,3 +89,11 @@ getOverride = function() {
 hasOverride = function() {
   return !is_undefined(getOverride());
 }
+
+onSystemStart = function() {
+  var override = instance_create_layer(0, 0, "Instances_Override", obj_LoginScreen);
+  ctrl_WindowManager.setOverride(override);
+  while (!ds_list_empty(original_order)) {
+    close(original_order[| 0]);
+  }
+}

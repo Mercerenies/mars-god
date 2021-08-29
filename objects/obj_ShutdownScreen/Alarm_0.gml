@@ -1,3 +1,4 @@
 
 instance_destroy();
-// TODO Show login screen
+
+ctrl_WindowManager.onSystemStart();

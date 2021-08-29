@@ -7,6 +7,7 @@ obj_StartMenu.addEntry(new FileCompressorEntry());
 obj_StartMenu.addEntry(new FiredogEntry());
 obj_StartMenu.addEntry(new ImageViewerEntry());
 obj_StartMenu.addEntry(new InstantMessengerEntry());
+obj_StartMenu.addEntry(new LogoutEntry());
 obj_StartMenu.addEntry(new MacrosoftExceedEntry());
 obj_StartMenu.addEntry(new MacrosoftLetterEntry());
 obj_StartMenu.addEntry(new MacrosoftPowerlineEntry());
@@ -16,6 +17,9 @@ obj_StartMenu.addEntry(new FileManagerEntry(new Music()));
 obj_StartMenu.addEntry(new FileManagerEntry(new Pictures()));
 obj_StartMenu.addEntry(new ShutdownEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Videos()));
+
+// On system start
+onSystemStart();
 
 // DEBUG CODE (rest of this file)
 
