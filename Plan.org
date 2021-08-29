@@ -154,9 +154,9 @@
 ** DONE MAIL
 ** DONE CALCULATOR
 ** DONE FILE EXPLORER
-** CAMERA
+** DONE CAMERA
 ** MINEBROOMER
-** CREDITS (also as .png? or as .ppt?)
+** TODO CREDITS (also as .png? or as .ppt?)
 ** ACHIEVEMENTS
 ** COMPRESSION TOOL (?)
 ** DONE IMAGE VIEWER

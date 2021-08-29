@@ -38,6 +38,12 @@ function FileManager() : WindowContents() constructor {
     _folder_name.setText(folder.getName());
   }
 
+  // This can be overridden to make custom file managers that report
+  // back to some other software.
+  static doOpenFile = function(file) {
+    file.openFile();
+  }
+
   navigateToFolder(_folder);
 }
 
@@ -162,7 +168,7 @@ function _FileManager_FileListbox(owner) : Listbox() constructor {
   }
 
   static onClick = function(idx) {
-    _getFolder()[| idx].openFile();
+    _owner.doOpenFile(_getFolder()[| idx]);
   }
 
 }
