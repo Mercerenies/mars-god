@@ -17,7 +17,12 @@ image_xscale = zoom_level;
 image_yscale = zoom_level;
 
 // Image speed
-image_speed = 0;
+if (current_message == "") {
+  image_speed = 0;
+  image_index = 0;
+} else {
+  image_speed = 1;
+}
 
 if (state == StapleyState.Appearing) {
   zoom_level = Util.toward(zoom_level, 1, 0.05);

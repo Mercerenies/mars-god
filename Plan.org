@@ -12,9 +12,9 @@
 
    After a few seconds of idly clicking around, a notification will
    pop up from Disco Yabber. Your boss has told you to go set up your
-   corporate account at ~josephlawfirm.com~.
+   corporate account at ~themislawfirm.com~.
 
-   Naturally, ~josephlawfirm.com~ is an obvious "injury lawyer"
+   Naturally, ~themislawfirm.com~ is an obvious "injury lawyer"
    website. You need to go to the "new hires" tab and set up an
    account. Again, the username field is already filled in. The
    password has specific requirements, and the only requirement that
@@ -162,7 +162,7 @@
 ** DONE MEDIA PLAYER
 ** TODO PACKERMAN (?)
 * WEBSITES
-** josephlawfirm.com
+** themislawfirm.com
 ** romangods.com
    + Someone else is using that password :(
 ** yoyogames.com (?)
@@ -170,7 +170,7 @@
 * OTHER THINGS
 ** POWERLINE DOCS FOR CREDITS
 ** POWERLINE DOCS FOR EMPLOYEE BRIEF (COMIC SANS)
-** LOGIN SCREEN
+** DONE LOGIN SCREEN
 ** DONE BSOD
 ** DONE SHUTDOWN OPTION
 ** PEOPLE IN CHAT HAVE MESSAGES MAKING FUN OF THEM?

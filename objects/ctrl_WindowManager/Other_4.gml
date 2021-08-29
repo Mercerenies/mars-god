@@ -23,10 +23,6 @@ onSystemStart();
 
 // DEBUG CODE (rest of this file)
 
-// Sample windows
-//addWindow(Windows.createWindow(new SampleWindow("Sample Window I"), 64, 64, -1, -1));
-//addWindow(Windows.createWindow(new SampleWindow("Sample Window II with Long Titlebar Name Blah Blah Blah"), 192, 128, -1, -1));
-
 // Sample docs
 ctrl_FileSystem.addFile(new Documents(), new DebugExampleFile("abc.dbg", 6));
 ctrl_FileSystem.addFile(new Documents(), new TextFile("textfile.doc", 8, "This is an example text file. Welcome to Macrosoft Letter I suppose."));
@@ -51,5 +47,7 @@ ctrl_FileSystem.addFile(new Videos(), new FakeMediaFile("sample.mp4", 699, spr_I
 ctrl_WordFeed.setWordFeed(new SampleWordFeed());
 
 // Stapley
+/*
 obj_Stapley.appear();
 obj_Stapley.say(new StapleyPrompt("Hi, I'm Stapley the Stapler. And I'm here to help!", 300));
+*/
