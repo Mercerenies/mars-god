@@ -57,6 +57,7 @@
     {"id":{"name":"win_MacrosoftExceed","path":"scripts/win_MacrosoftExceed/win_MacrosoftExceed.yy",},"order":14,},
     {"id":{"name":"win_FileCompressor","path":"scripts/win_FileCompressor/win_FileCompressor.yy",},"order":12,},
     {"id":{"name":"scr_PasswordBox","path":"scripts/scr_PasswordBox/scr_PasswordBox.yy",},"order":1,},
+    {"id":{"name":"site_RomanGods","path":"scripts/site_RomanGods/site_RomanGods.yy",},"order":7,},
     {"id":{"name":"spr_ChatManager","path":"sprites/spr_ChatManager/spr_ChatManager.yy",},"order":0,},
     {"id":{"name":"ctrl_ChatManager","path":"objects/ctrl_ChatManager/ctrl_ChatManager.yy",},"order":1,},
     {"id":{"name":"obj_DisplayedWindow","path":"objects/obj_DisplayedWindow/obj_DisplayedWindow.yy",},"order":3,},

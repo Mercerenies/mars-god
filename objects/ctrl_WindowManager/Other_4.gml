@@ -32,8 +32,8 @@ onSystemStart();
 //ctrl_FileSystem.addFile(new Documents(), new SlideshowFile("slides.ppt", 8, spr_Slideshow_Example));
 
 // Sample emails
-ctrl_FileSystem.addFile(new Mail(), new MailFile("Sender Name", "Subject Line", "This is an email."));
-ctrl_FileSystem.addFile(new Mail(), new MailFile("Mercerenies", "Hello :)", "Welcome to my game!"));
+//ctrl_FileSystem.addFile(new Mail(), new MailFile("Sender Name", "Subject Line", "This is an email."));
+//ctrl_FileSystem.addFile(new Mail(), new MailFile("Mercerenies", "Hello :)", "Welcome to my game!"));
 
 // Sample pics
 ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample1.png", 10, spr_Image_Example1));

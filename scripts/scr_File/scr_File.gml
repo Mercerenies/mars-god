@@ -50,6 +50,27 @@ function DebugExampleFile(name, size) : File() constructor {
 
 }
 
+function EncryptedFile(real_file) : File() constructor {
+  _real_file = real_file;
+
+  static getBaseName = function() {
+    return _real_file.getBaseName();
+  }
+
+  static getBaseSize = function() {
+    return _real_file.getBaseSize();
+  }
+
+  static openFile = function() {
+    if (ctrl_GameManager.decrypted) {
+      _real_file.openFile()
+    } else {
+      showErrorBox("This file is encrypted!"); // TODO Actual popup box
+    }
+  }
+
+}
+
 function TextFile(name, size, contents) : File() constructor {
   _name = name;
   _size = size;

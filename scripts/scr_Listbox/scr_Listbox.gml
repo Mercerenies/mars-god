@@ -66,7 +66,11 @@ function Listbox() constructor {
     Events.callOn(self, ev);
   }
 
-  highlightedCell = function() {
+  static doesDrawRect = function() {
+    return true;
+  }
+
+  static highlightedCell = function() {
     if (!ctrl_WindowManager.isActiveWindow(getOwner().getOwner())) {
       return -1;
     }
@@ -96,8 +100,10 @@ function Listbox() constructor {
     var x2 = x1 + getWidth();
     var y2 = y1 + getHeight();
     draw_set_color(Colors.WHITE);
-    draw_rectangle(x1, y1, x2, y2, false);
-    Util.drawSunkenBox(x1, y1, x2, y2);
+    if (doesDrawRect()) {
+      draw_rectangle(x1, y1, x2, y2, false);
+      Util.drawSunkenBox(x1, y1, x2, y2);
+    }
 
     var fields_to_show = min(getTextFieldCount(), cellCount());
     for (var idx = 0; idx < fields_to_show; idx++) {

@@ -39,6 +39,6 @@ function MessageBox() : WindowContents() constructor {
 }
 
 function showMessageBox(message) {
-  var box = Windows.addOrFindWindow(new ErrorBox(), 160, 105, -1, -1);
+  var box = Windows.addOrFindWindow(new MessageBox(), 160, 105, -1, -1);
   box.window_body.setMessage(message);
 }

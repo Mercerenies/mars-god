@@ -6,6 +6,11 @@ themis_account_made = false;
 data_entered = 0;
 can_visit_gods = false;
 tried_to_visit_gods = 0;
+got_gods_file = false;
+decrypted = false;
+on_waitlist = false;
+past_waitlist = false;
+logged_in_to_gods = false;
 
 // DEBUG CODE
 themis_account_made = true;
@@ -66,7 +71,6 @@ ds_queue_enqueue(full_game_queue, new StapleyEvent(new StapleyPrompt("Then press
 ds_queue_enqueue(full_game_queue, new Delay(180));
 
 ds_queue_enqueue(full_game_queue, new AwaitVarAtLeast("data_entered", 20));
-//*/
 
 ds_queue_enqueue(full_game_queue, new SetVar("can_visit_gods", true));
 ds_queue_enqueue(full_game_queue, new AddFile(new Documents(), new TextFile("Important Info.doc", 11, "romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com romangods.com")));
@@ -83,5 +87,28 @@ ds_queue_enqueue(full_game_queue, new SendChatMessage("Boss", "Specifically, don
 ds_queue_enqueue(full_game_queue, new Delay(120));
 ds_queue_enqueue(full_game_queue, new SendChatMessage("Boss", "There's nothing there."));
 ds_queue_enqueue(full_game_queue, new Delay(120));
+
+ds_queue_enqueue(full_game_queue, new AwaitVarAtLeast("tried_to_visit_gods", 3));
+
+ds_queue_enqueue(full_game_queue, new StapleyEvent(new StapleyPrompt("Hi there! It looks like you're trying to defy corporate policy!", 180)));
+ds_queue_enqueue(full_game_queue, new Delay(180));
+ds_queue_enqueue(full_game_queue, new StapleyEvent(new StapleyPrompt("That's not a very good idea.", 180)));
+ds_queue_enqueue(full_game_queue, new Delay(180));
+
+ds_queue_enqueue(full_game_queue, new AwaitVar("got_gods_file"));
+ds_queue_enqueue(full_game_queue, new Delay(120));
+//*/
+
+ds_queue_enqueue(full_game_queue, new SetWordFeed(new UniformWordFeed(["law", "legal", "firm", "Themis", "company", "corporate", "subpoena", "service", "papers", "paper", "document", "documents", "reschedule", "judge", "jury", "lawyer", "attorney", "case", "suit", "lawsuit", "protection", "habeus", "corpus", "dreaming"])));
+ds_queue_enqueue(full_game_queue, new SetVar("data_entered", 0));
+ds_queue_enqueue(full_game_queue, new Delay(180));
+
+ds_queue_enqueue(full_game_queue, new SendChatMessage("Boss", "Hey! Get back to work!"));
+ds_queue_enqueue(full_game_queue, new Delay(120));
+ds_queue_enqueue(full_game_queue, new SendChatMessage("Boss", "That data won't enter itself!"));
+ds_queue_enqueue(full_game_queue, new Delay(120));
+
+ds_queue_enqueue(full_game_queue, new AwaitVarAtLeast("data_entered", 10));
+ds_queue_enqueue(full_game_queue, new AddMail(new MailFile("Minerva", "(no subject)", "Mars! Listen to me! [content blocked] Please reply to this if you can hear me!"), true));
 
 //*/

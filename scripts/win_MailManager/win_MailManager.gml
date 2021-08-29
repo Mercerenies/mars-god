@@ -260,6 +260,7 @@ function _MailComposer_SendButton(owner) : SpriteButton() constructor {
     var file = _owner.getFile();
     file.onReply();
     ctrl_WindowManager.close(_owner.getOwner());
+    showMessageBox("Reply sent!");
   }
 
 }

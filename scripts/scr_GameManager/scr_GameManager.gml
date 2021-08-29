@@ -106,3 +106,16 @@ function AddFile(folder, file) : GameEvent() constructor {
   }
 
 }
+
+function AddMail(file, announce) : GameEvent() constructor {
+  _file = file;
+  _announce = announce;
+
+  static run = function() {
+    ctrl_FileSystem.addFile(new Mail(), _file);
+    if (_announce) {
+      showMessageBox("You've got mail!");
+    }
+  }
+
+}

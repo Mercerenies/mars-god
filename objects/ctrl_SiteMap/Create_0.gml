@@ -2,6 +2,7 @@
 _sites = [
   ["example.com", ExampleSite], // DEBUG CODE
   ["themislawfirm.com", ThemisLaw],
+  ["romangods.com", RomanGods],
 ];
 
 _defaultsite = DefaultSite;
