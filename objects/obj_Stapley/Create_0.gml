@@ -29,7 +29,8 @@ isActive = function() {
   return zoom_level >= 1;
 }
 
-// p should be a StapleyPrompt instance.
+// p should be a StapleyPrompt instance or compatible object (has
+// run() method).
 say = function(p) {
   ds_queue_enqueue(talking, p);
 }

@@ -53,7 +53,7 @@ function InstantMessengerChat() : WindowContents() constructor {
   }
 
   static desiredWidth = function() {
-    return 400;
+    return 440;
   }
 
   static desiredHeight = function() {
@@ -144,7 +144,7 @@ function _InstantMessengerChat_HistoryListbox(owner) : Listbox() constructor {
   }
 
   static getWidth = function() {
-    return 384;
+    return 424;
   }
 
   static getHeight = function() {
@@ -196,7 +196,7 @@ function _InstantMessengerChat_ReplyBox(owner) : Textbox() constructor {
   }
 
   static getWidth = function() {
-    return 356;
+    return 396;
   }
 
   static getHeight = function() {
@@ -213,7 +213,7 @@ function _InstantMessengerChat_ReplyButton(owner) : SpriteButton() constructor {
   }
 
   static xPos = function() {
-    return _owner.getOwner().x + 372;
+    return _owner.getOwner().x + 412;
   }
 
   static yPos = function() {

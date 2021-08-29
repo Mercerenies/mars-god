@@ -28,6 +28,15 @@ function WaitForOpenWindow() : GameEvent() constructor {
 
 }
 
+function WaitForWindow(id_) : GameEvent() constructor {
+  _id = id_;
+
+  static shouldTrigger = function() {
+    return !is_undefined(ctrl_WindowManager.findWindowById(_id));
+  }
+
+}
+
 function SendChatMessage(sender, message_text) : GameEvent() constructor {
   _sender = sender;
   _message_text = message_text;
@@ -37,6 +46,63 @@ function SendChatMessage(sender, message_text) : GameEvent() constructor {
     ctrl_ChatManager.addChatMessage(_sender, message);
     var mgr = Windows.addOrFindWindow(new InstantMessengerChat(), 128, 30, -1, -1);
     mgr.window_body.setPerson(_sender);
+  }
+
+}
+
+function AwaitVar(var_name) : GameEvent() constructor {
+  _var_name = var_name;
+
+  static shouldTrigger = function() {
+    return variable_instance_get(ctrl_GameManager, _var_name);
+  }
+
+}
+
+function SetWordFeed(feed) : GameEvent() constructor {
+  _feed = feed;
+
+  static run = function() {
+    ctrl_WordFeed.setWordFeed(_feed);
+  }
+
+}
+
+function StapleyEvent(ev) : GameEvent() constructor {
+  _ev = ev;
+
+  static run = function() {
+    obj_Stapley.say(_ev);
+  }
+
+}
+
+function SetVar(var_name, value) : GameEvent() constructor {
+  _var_name = var_name;
+  _value = value;
+
+  static run = function() {
+    variable_instance_set(ctrl_GameManager, _var_name, _value);
+  }
+
+}
+
+function AwaitVarAtLeast(var_name, value) : GameEvent() constructor {
+  _var_name = var_name;
+  _value = value;
+
+  static shouldTrigger = function() {
+    return variable_instance_get(ctrl_GameManager, _var_name) >= _value;
+  }
+
+}
+
+function AddFile(folder, file) : GameEvent() constructor {
+  _folder = folder;
+  _file = file;
+
+  static run = function() {
+    ctrl_FileSystem.addFile(_folder, _file);
   }
 
 }

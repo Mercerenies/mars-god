@@ -32,4 +32,6 @@ function Website() constructor {
     ds_list_add(_children, child);
   }
 
+  static onReady = function() {}
+
 }

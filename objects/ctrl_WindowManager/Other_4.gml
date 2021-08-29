@@ -18,15 +18,18 @@ obj_StartMenu.addEntry(new FileManagerEntry(new Pictures()));
 obj_StartMenu.addEntry(new ShutdownEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Videos()));
 
+// Initial file system setup
+
+// Documents
+ctrl_FileSystem.addFile(new Documents(), new TextFile("Unimportant Trivia.doc", 9, "An ant has three joints in each leg."));
+
 // On system start
 onSystemStart();
 
 // DEBUG CODE (rest of this file)
 
 // Sample docs
-ctrl_FileSystem.addFile(new Documents(), new DebugExampleFile("abc.dbg", 6));
-ctrl_FileSystem.addFile(new Documents(), new TextFile("textfile.doc", 8, "This is an example text file. Welcome to Macrosoft Letter I suppose."));
-ctrl_FileSystem.addFile(new Documents(), new SlideshowFile("slides.ppt", 8, spr_Slideshow_Example));
+//ctrl_FileSystem.addFile(new Documents(), new SlideshowFile("slides.ppt", 8, spr_Slideshow_Example));
 
 // Sample emails
 ctrl_FileSystem.addFile(new Mail(), new MailFile("Sender Name", "Subject Line", "This is an email."));
@@ -44,7 +47,7 @@ ctrl_FileSystem.addFile(new Music(), new MediaFile("sample.ogg", 16, snd_Sound_E
 ctrl_FileSystem.addFile(new Videos(), new FakeMediaFile("sample.mp4", 699, spr_Image_Example1));
 
 // Word feed
-ctrl_WordFeed.setWordFeed(new SampleWordFeed());
+ctrl_WordFeed.setWordFeed(new UniformWordFeed(["Exceed"]));
 
 // Stapley
 /*

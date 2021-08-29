@@ -129,7 +129,7 @@ function MacrosoftExceed() : WindowContents() constructor {
   }
 
   static onSuccess = function() {
-    // TODO
+    ctrl_GameManager.data_entered += 1;
   }
 
 }
@@ -145,7 +145,11 @@ function MacrosoftExceedEntry() : StartMenuEntry() constructor {
   }
 
   static onClick = function() {
-    Windows.addOrFindWindow(new MacrosoftExceed(), 130, 150, -1, -1);
+    if (ctrl_GameManager.themis_account_made) {
+      Windows.addOrFindWindow(new MacrosoftExceed(), 130, 150, -1, -1);
+    } else {
+      showErrorBox("Error! Could not connect to the company database. Are you logged in?");
+    }
   }
 
 }

@@ -53,6 +53,7 @@ function Firedog() : WindowContents() constructor {
     _site = site;
     if (!is_undefined(_site)) {
       _site.setOwner(self);
+      _site.onReady();
     }
   }
 

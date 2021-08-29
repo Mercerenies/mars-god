@@ -27,6 +27,7 @@
    + Must contain at least one number.
    + Must contain at least two numbers.
    + Must contain at least three numbers.
+   + Must contain at least four numbers.
    + Must contain no more than four numbers.
    + Must not begin with (whatever character it begins with). This
      character is decided once when this condition is first triggered,
@@ -202,3 +203,5 @@
    Get all of the selfie pictures (time permitting)
 ** POWER SAVER (PS)
    Restart the computer.
+** IM the DM (IMTDM)
+   Message "Mercer" in instant messaging
