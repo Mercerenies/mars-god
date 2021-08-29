@@ -1,2 +1,4 @@
+
 // DEBUG CODE
-Windows.addOrFindWindow(new Calculator(), 96, 96, -1, -1);
+var override = instance_create_layer(0, 0, "Instances_Override", obj_BSOD);
+ctrl_WindowManager.setOverride(override);

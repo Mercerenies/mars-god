@@ -2,6 +2,8 @@
 original_order = ds_list_create();
 z_order = ds_list_create(); // End of list is on top
 
+_override_object = undefined;
+
 // Takes obj_DisplayedWindow instance
 addWindow = function(window) {
   ds_list_add(original_order, window.id);
@@ -74,4 +76,16 @@ findWindowById = function(id_) {
     }
   }
   return undefined;
+}
+
+setOverride = function(obj) {
+  _override_object = obj;
+}
+
+getOverride = function() {
+  return _override_object;
+}
+
+hasOverride = function() {
+  return !is_undefined(getOverride());
 }

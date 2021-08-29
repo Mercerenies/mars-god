@@ -166,6 +166,7 @@
 ** romangods.com
    + Someone else is using that password :(
 ** yoyogames.com (?)
+** example.com
 * OTHER THINGS
 ** POWERLINE DOCS FOR CREDITS
 ** POWERLINE DOCS FOR EMPLOYEE BRIEF (COMIC SANS)
@@ -199,3 +200,5 @@
    Reply to spam email.
 ** SELFIE SAVANT (SS)
    Get all of the selfie pictures (time permitting)
+** POWER SAVER (PS)
+   Restart the computer.

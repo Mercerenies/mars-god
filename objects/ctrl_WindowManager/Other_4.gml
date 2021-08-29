@@ -14,6 +14,7 @@ obj_StartMenu.addEntry(new MailManagerEntry());
 obj_StartMenu.addEntry(new MediaPlayerEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Music()));
 obj_StartMenu.addEntry(new FileManagerEntry(new Pictures()));
+obj_StartMenu.addEntry(new ShutdownEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Videos()));
 
 // DEBUG CODE (rest of this file)

@@ -20,4 +20,6 @@ enum Icon {
   Zip = 17,
   Message = 18,
   Chat = 19,
+  Power = 20,
+  Logout = 21,
 }

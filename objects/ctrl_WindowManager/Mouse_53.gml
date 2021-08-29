@@ -3,6 +3,13 @@ if (!ScreenRegion.pointIn(cursor_x(), cursor_y())) {
   exit;
 }
 
+var override = getOverride();
+if (!is_undefined(override)) {
+  override.event("gMouseDown");
+  override.event("mouseDown");
+  exit;
+}
+
 var found = false;
 
 obj_Stapley.event("gMouseDown");

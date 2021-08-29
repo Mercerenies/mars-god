@@ -5,6 +5,13 @@ if (!ScreenRegion.pointIn(cursor_x(), cursor_y())) {
 
 var found = false;
 
+var override = getOverride();
+if (!is_undefined(override)) {
+  override.event("gMouseUp");
+  override.event("mouseUp");
+  exit;
+}
+
 obj_Stapley.event("gMouseUp");
 if (obj_Stapley.isActive() && (!found) && (point_in_rectangle(cursor_x(), cursor_y(), obj_Stapley.bbox_left, obj_Stapley.bbox_top, obj_Stapley.bbox_right, obj_Stapley.bbox_bottom))) {
   // We clicked Stapley.
