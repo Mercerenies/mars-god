@@ -21,7 +21,7 @@ addFile = function(folder, file) {
 
 findFileByName = function(folder, filename) {
   var files = getFiles(folder);
-  for (var idx = 0; idx < ds_list_size(files); i++) {
+  for (var idx = 0; idx < ds_list_size(files); idx++) {
     if (files[| idx].getBaseName() == filename) {
       return files[| idx];
     }

@@ -1,6 +1,7 @@
 
 // Start Menu Initialization
 obj_StartMenu.addEntry(new CalculatorEntry());
+obj_StartMenu.addEntry(new CameraEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Documents()));
 obj_StartMenu.addEntry(new ImageViewerEntry());
 obj_StartMenu.addEntry(new MacrosoftLetterEntry());
