@@ -227,9 +227,19 @@ function _InstantMessengerChat_ReplyButton(owner) : SpriteButton() constructor {
       return;
     }
     var text = reply_box.getText();
+    if (text == "") {
+      return;
+    }
     var message = new ChatMessage(SENDER_MARS, text);
     ctrl_ChatManager.addChatMessage(person, message);
     reply_box.setText("");
+  }
+
+  static step = function() {
+    var reply_box = _owner.getReplyBox();
+    if ((keyboard_check_released(vk_enter)) && (reply_box.isFocused())) {
+      onClick(); // Simulate a click
+    }
   }
 
 }

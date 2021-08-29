@@ -11,6 +11,10 @@ function Textbox() constructor {
     Events.callOn(self, ev);
   }
 
+  static isFocused = function() {
+    return _focused;
+  }
+
   static step = function() {
     if (_focused) {
       _text = keyboard_string;
@@ -94,6 +98,9 @@ function Textbox() constructor {
 
   static setText = function(t) {
     _text = t;
+    if (_focused) {
+      keyboard_string = _text;
+    }
   }
 
   static getDisplayText = function() {
