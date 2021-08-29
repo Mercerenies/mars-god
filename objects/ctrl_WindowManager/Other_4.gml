@@ -3,7 +3,9 @@
 obj_StartMenu.addEntry(new CalculatorEntry());
 obj_StartMenu.addEntry(new CameraEntry());
 obj_StartMenu.addEntry(new FileManagerEntry(new Documents()));
+obj_StartMenu.addEntry(new FileCompressorEntry());
 obj_StartMenu.addEntry(new ImageViewerEntry());
+obj_StartMenu.addEntry(new InstantMessengerEntry());
 obj_StartMenu.addEntry(new MacrosoftLetterEntry());
 obj_StartMenu.addEntry(new MacrosoftPowerlineEntry());
 obj_StartMenu.addEntry(new MailManagerEntry());
@@ -15,8 +17,8 @@ obj_StartMenu.addEntry(new FileManagerEntry(new Videos()));
 // DEBUG CODE (rest of this file)
 
 // Sample windows
-addWindow(Windows.createWindow(new SampleWindow("Sample Window I"), 64, 64, -1, -1));
-addWindow(Windows.createWindow(new SampleWindow("Sample Window II with Long Titlebar Name Blah Blah Blah"), 192, 128, -1, -1));
+//addWindow(Windows.createWindow(new SampleWindow("Sample Window I"), 64, 64, -1, -1));
+//addWindow(Windows.createWindow(new SampleWindow("Sample Window II with Long Titlebar Name Blah Blah Blah"), 192, 128, -1, -1));
 
 // Sample docs
 ctrl_FileSystem.addFile(new Documents(), new DebugExampleFile("abc.dbg", 6));

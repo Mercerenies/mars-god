@@ -17,4 +17,7 @@ enum Icon {
   ImageViewer = 14,
   MediaPlayer = 15,
   Camera = 16,
+  Zip = 17,
+  Message = 18,
+  Chat = 19,
 }
