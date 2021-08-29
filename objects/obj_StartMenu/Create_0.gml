@@ -2,6 +2,8 @@
 active = false;
 entries = ds_list_create();
 
+_cellstart = 0;
+
 isActive = function() {
   return active;
 }
@@ -31,8 +33,10 @@ mouseDown = function() {
     // No highlight
   } else if (highlighted == 0) {
     // Up arrow
+    _cellstart = max(_cellstart - 1, 0);
   } else if (highlighted == cellCount() - 1) {
     // Down arrow
+    _cellstart = min(_cellstart + 1, ds_list_size(entries) - (cellCount() - 2));
   } else {
     // Regular button
     var entry = getEntry(cellToEntryIndex(highlighted));
@@ -71,7 +75,7 @@ cellY = function(idx) {
 }
 
 cellToEntryIndex = function(idx) {
-  return idx - 1;
+  return idx - 1 + _cellstart;
 }
 
 highlightedCell = function() {

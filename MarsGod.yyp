@@ -42,6 +42,7 @@
     {"id":{"name":"spr_Luna","path":"sprites/spr_Luna/spr_Luna.yy",},"order":1,},
     {"id":{"name":"obj_MarsTitleSplash","path":"objects/obj_MarsTitleSplash/obj_MarsTitleSplash.yy",},"order":2,},
     {"id":{"name":"scripts_Cursor","path":"scripts/scripts_Cursor/scripts_Cursor.yy",},"order":2,},
+    {"id":{"name":"win_MacrosoftExceed","path":"scripts/win_MacrosoftExceed/win_MacrosoftExceed.yy",},"order":14,},
     {"id":{"name":"win_FileCompressor","path":"scripts/win_FileCompressor/win_FileCompressor.yy",},"order":12,},
     {"id":{"name":"scr_PasswordBox","path":"scripts/scr_PasswordBox/scr_PasswordBox.yy",},"order":1,},
     {"id":{"name":"spr_ChatManager","path":"sprites/spr_ChatManager/spr_ChatManager.yy",},"order":0,},
