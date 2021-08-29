@@ -44,3 +44,7 @@ ctrl_FileSystem.addFile(new Videos(), new FakeMediaFile("sample.mp4", 699, spr_I
 
 // Word feed
 ctrl_WordFeed.setWordFeed(new SampleWordFeed());
+
+// Stapley
+obj_Stapley.appear();
+obj_Stapley.say(new StapleyPrompt("Hi, I'm Stapley the Stapler. And I'm here to help!", 300));

@@ -5,8 +5,15 @@ if (!ScreenRegion.pointIn(cursor_x(), cursor_y())) {
 
 var found = false;
 
+obj_Stapley.event("gMouseDown");
+if (obj_Stapley.isActive() && (!found) && (point_in_rectangle(cursor_x(), cursor_y(), obj_Stapley.bbox_left, obj_Stapley.bbox_top, obj_Stapley.bbox_right, obj_Stapley.bbox_bottom))) {
+  // We clicked Stapley.
+  obj_Stapley.event("mouseDown");
+  found = true;
+}
+
 obj_Taskbar.event("gMouseDown");
-if (cursor_y() >= obj_Taskbar.y) {
+if ((!found) && (cursor_y() >= obj_Taskbar.y)) {
   // We clicked in the taskbar.
   obj_Taskbar.event("mouseDown");
   found = true;
