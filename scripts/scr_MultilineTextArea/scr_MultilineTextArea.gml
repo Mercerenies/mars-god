@@ -14,14 +14,20 @@ function MultilineTextArea() constructor {
     Events.callOn(self, ev);
   }
 
+  static doesDrawRect = function() {
+    return true;
+  }
+
   static draw = function() {
     var x1 = xPos();
     var y1 = yPos();
     var x2 = x1 + getWidth();
     var y2 = y1 + getHeight();
     draw_set_color(Colors.WHITE);
-    draw_rectangle(x1, y1, x2, y2, false);
-    Util.drawSunkenBox(x1, y1, x2, y2);
+    if (doesDrawRect()) {
+      draw_rectangle(x1, y1, x2, y2, false);
+      Util.drawSunkenBox(x1, y1, x2, y2);
+    }
 
     draw_set_color(Colors.BLACK);
     draw_set_font(getFont());
