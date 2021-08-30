@@ -141,3 +141,9 @@ function StapleyAngry() : GameEvent() constructor {
     obj_Stapley.hp = 10;
   }
 }
+
+function Endgame() : GameEvent() constructor {
+  static run = function() {
+    room_goto(rm_End1);
+  }
+}

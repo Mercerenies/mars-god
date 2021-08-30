@@ -55,7 +55,7 @@ function RomanGods() : Website() constructor {
       // Download file
       showMessageBox("Really important file downloaded successfully. Check your Music folder.");
       if (is_undefined(ctrl_FileSystem.findFileByName(new Music(), "Message from Minerva.ogg"))) {
-        ctrl_FileSystem.addFile(new Music(), new EncryptedFile(new MediaFile("Message from Minerva.ogg", 40, noone))); // TODO
+        ctrl_FileSystem.addFile(new Music(), new EncryptedFile(new MediaFile("Message from Minerva.ogg", 40, snd_Sound_Minerva)));
       }
       ctrl_GameManager.got_gods_file = true;
       break;

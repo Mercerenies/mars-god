@@ -36,6 +36,11 @@ doLogin = function() {
       instance_destroy();
       ctrl_GameManager.is_admin = true;
       obj_Taskbar.disabled = true;
+      with (ctrl_WindowManager) {
+        while (!ds_list_empty(original_order)) {
+          close(original_order[| 0]);
+        }
+      }
     } else {
       _error_box.setText("Unknown username! Did you mean 'Mars'?");
     }

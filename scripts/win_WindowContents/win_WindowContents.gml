@@ -68,6 +68,3 @@ function WindowContents() constructor {
   }
 
 }
-
-// TODO Set up a proper forwarding interface for controls tomorrow, so
-// we aren't explicitly delegating the whole universe (/////)

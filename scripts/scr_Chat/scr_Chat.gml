@@ -1,7 +1,7 @@
 
 #macro SENDER_MARS 0
 #macro SENDER_OTHER 1
-#macro CHAT_MAX 12
+#macro CHAT_MAX 10
 
 // Sender should be a SENDER_* constant
 function ChatMessage(sender, message) constructor {

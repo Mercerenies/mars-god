@@ -1,0 +1,1 @@
+ctrl_SplashScreen.finished = true;

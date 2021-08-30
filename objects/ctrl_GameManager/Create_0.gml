@@ -18,20 +18,8 @@ admin = false;
 is_admin = false;
 winner = false;
 
-// DEBUG CODE
-themis_account_made = true;
-can_visit_gods = true;
-tried_to_visit_gods = 7;
-got_gods_file = true;
-on_waitlist = true;
-logged_in_to_gods = true;
-admin = true;
-winner = true;
-// END DEBUG CODE
+audio_play_sound(snd_Intro2, 0, false);
 
-// These comments are only commented out for DEBUG CODE reasons
-
-/*
 ds_queue_enqueue(full_game_queue, new Delay(60));
 ds_queue_enqueue(full_game_queue, new WaitForOpenWindow());
 ds_queue_enqueue(full_game_queue, new Delay(180));
@@ -176,7 +164,7 @@ ds_queue_enqueue(full_game_queue, new Delay(120));
 
 ds_queue_enqueue(full_game_queue, new AwaitVarAtLeast("data_entered", 10));
 ds_queue_enqueue(full_game_queue, new AddMail(new MailFile("Minerva", "re: (no subject)", "Mars! I figured it out! You need to logout and login to the admin account. The username is 'admin' and the password is 'password'. Hurry!"), true));
-*/
+
 ds_queue_enqueue(full_game_queue, new SetVar("admin", true));
 ds_queue_enqueue(full_game_queue, new AwaitVar("is_admin"));
 ds_queue_enqueue(full_game_queue, new Delay(180));
@@ -196,6 +184,5 @@ ds_queue_enqueue(full_game_queue, new Delay(180));
 ds_queue_enqueue(full_game_queue, new AwaitVar("winner"));
 ds_queue_enqueue(full_game_queue, new Delay(180));
 ds_queue_enqueue(full_game_queue, new StapleyEvent(new StapleyDisappear()));
-/////
-
-//*/
+ds_queue_enqueue(full_game_queue, new Delay(60));
+ds_queue_enqueue(full_game_queue, new Endgame());

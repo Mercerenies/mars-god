@@ -23,34 +23,18 @@ obj_StartMenu.addEntry(new FileManagerEntry(new Videos()));
 // Documents
 ctrl_FileSystem.addFile(new Documents(), new TextFile("Unimportant Trivia.doc", 9, "An ant has three joints in each leg."));
 
+ctrl_FileSystem.addFile(new Pictures(), new ImageFile("Jam.png", 11, spr_Image_Jam));
+ctrl_FileSystem.addFile(new Videos(), new FakeMediaFile("[18+] [Explicit] [Adult Content] [Content Banned in Country] [NSFW] [Viewer Beware] [File is long name].mp4", 699, spr_Image_Black));
+
+ctrl_FileSystem.addFile(new Mail(), new MailFile("IT Department", "Account Setup", "Welcome to your inbox. Your email is now set up. Remember, your office is your family!"));
+ctrl_FileSystem.addFile(new Mail(), new MailFile("Mercerenies", "Hello", "Welcome to my game!"));
+ctrl_FileSystem.addFile(new Mail(), new MailFile("IT Department", "Notification", "Don't forget to update your operating system. Also, don't click on spam links."));
+ctrl_FileSystem.addFile(new Mail(), new MailFile("ewuihouirhw@jmail.com", "Greetings", "I am a prince from a forgotten nation and am in need of donations. If you donate now, I will be looking for a vizier in the near future. Reply to this email if interested."));
+ctrl_FileSystem.addFile(new Mail(), new MailFile("Boss", "test", "is this working?\n\n- Boss"));
+ctrl_FileSystem.addFile(new Mail(), new MailFile("Boss", "(no subject)", "i think its working"));
+
 // On system start
 onSystemStart();
 
-// DEBUG CODE (rest of this file)
-
-// Sample docs
-//ctrl_FileSystem.addFile(new Documents(), new SlideshowFile("slides.ppt", 8, spr_Slideshow_Example));
-
-// Sample emails
-//ctrl_FileSystem.addFile(new Mail(), new MailFile("Sender Name", "Subject Line", "This is an email."));
-//ctrl_FileSystem.addFile(new Mail(), new MailFile("Mercerenies", "Hello :)", "Welcome to my game!"));
-
-// Sample pics
-ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample1.png", 10, spr_Image_Example1));
-ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample2.png", 9, spr_Image_Example2));
-ctrl_FileSystem.addFile(new Pictures(), new ImageFile("sample3.png", 9, spr_Image_Example3));
-
-// Sample music
-ctrl_FileSystem.addFile(new Music(), new MediaFile("sample.ogg", 16, snd_Sound_Example));
-
-// Sample videos
-ctrl_FileSystem.addFile(new Videos(), new FakeMediaFile("sample.mp4", 699, spr_Image_Example1));
-
 // Word feed
 ctrl_WordFeed.setWordFeed(new UniformWordFeed(["Exceed"]));
-
-// Stapley
-/*
-obj_Stapley.appear();
-obj_Stapley.say(new StapleyPrompt("Hi, I'm Stapley the Stapler. And I'm here to help!", 300));
-*/

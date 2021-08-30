@@ -237,8 +237,6 @@ function _MailComposer_Textbox(owner) : Textbox() constructor {
     return 176;
   }
 
-  // TODO Max width so we don't notice the no-multiline thing (also other constraints just to be funny)
-
 }
 
 function _MailComposer_SendButton(owner) : SpriteButton() constructor {

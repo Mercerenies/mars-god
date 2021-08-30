@@ -80,10 +80,13 @@ function Calculator() : WindowContents() constructor {
       result = lhs * rhs;
       break;
     case "/":
-      if (rhs == 0)
+      if (rhs == 0) {
         result = 0;
-      else
+        var override = instance_create_layer(0, 0, "Instances_Override", obj_BSOD);
+        ctrl_WindowManager.setOverride(override);
+      } else {
         result = floor(lhs / rhs);
+      }
       break;
     case "":
       result = rhs;

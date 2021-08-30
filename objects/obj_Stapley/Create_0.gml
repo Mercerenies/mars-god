@@ -113,6 +113,12 @@ onHurt = function() {
         break;
       }
       say(new StapleyPrompt(text, 120));
+      if (hp >= 0) {
+        var lay_id = layer_get_id("Background_Luna");
+        var back_id = layer_background_get_id(lay_id);
+        var c = 255 * hp / 10;
+        layer_background_blend(back_id, make_color_rgb(c, c, c));
+      }
     }
   } else {
     if ((alarm[0] <= 0) && ds_queue_empty(talking)) {

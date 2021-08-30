@@ -1,6 +1,6 @@
 
 _sites = [
-  ["example.com", ExampleSite], // DEBUG CODE
+  ["example.com", ExampleSite],
   ["themislawfirm.com", ThemisLaw],
   ["romangods.com", RomanGods],
 ];
