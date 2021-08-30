@@ -2,27 +2,34 @@
 function RomanGods() : Website() constructor {
   addChild(new _RomanGods_HeaderBox(self));
   addChild(new _RomanGods_Listbox(self));
+  addChild(new _RomanGods_Password(self));
 
   static onReady = function() {
     if (!ctrl_GameManager.can_visit_gods) {
       getOwner().openSite(new DefaultSite());
-    }
-    switch (ctrl_GameManager.tried_to_visit_gods++) {
-    case 0:
-      getOwner().openSite(new StaticSite("ERROR!\n\nThis website has been marked as insecure and blocked to protect your computer.\n\nDo NOT attempt to visit this site again."));
-      break;
-    case 1:
-      getOwner().openSite(new StaticSite("Seriously! This site is dangerous!"));
-      break;
-    case 2:
-      getOwner().openSite(new StaticSite("Turn back now!"));
-      break;
-    case 3:
-      getOwner().openSite(new StaticSite("You're not listening, are you?"));
-      break;
-    case 4:
-      getOwner().openSite(new StaticSite("The IT department will be notified of your noncompliance."));
-      break;
+    } else {
+      switch (ctrl_GameManager.tried_to_visit_gods++) {
+      case 0:
+        getOwner().openSite(new StaticSite("ERROR!\n\nThis website has been marked as insecure and blocked to protect your computer.\n\nDo NOT attempt to visit this site again."));
+        break;
+      case 1:
+        getOwner().openSite(new StaticSite("Seriously! This site is dangerous!"));
+        break;
+      case 2:
+        getOwner().openSite(new StaticSite("Turn back now!"));
+        break;
+      case 3:
+        getOwner().openSite(new StaticSite("You're not listening, are you?"));
+        break;
+      case 4:
+        getOwner().openSite(new StaticSite("The IT department will be notified of your noncompliance."));
+        break;
+      default:
+        if (ctrl_GameManager.logged_in_to_gods) {
+          getOwner().openSite(new RomanGods_Gods());
+        }
+        break;
+      }
     }
   }
 
@@ -37,7 +44,7 @@ function RomanGods() : Website() constructor {
         var position = irandom_range(3, 19732);
         showMessageBox("You are in position " + string(position) + " on the login waitlist. Please be patient.");
       } else {
-        // TODO This
+        getOwner().openSite(new RomanGods_Login());
       }
       break;
     case 1:
@@ -46,15 +53,11 @@ function RomanGods() : Website() constructor {
       break;
     case 2:
       // Download file
-      showMessageBox("Really important file downloaded successfully.");
-      if (is_undefined(ctrl_FileSystem.findFileByName(new Documents(), "Message from Minerva.doc"))) {
-        ctrl_FileSystem.addFile(new Documents(), new EncryptedFile(new TextFile("Message from Minerva.doc", 15, "Listen carefully! You need to make an account on RomanGods.com!")));
+      showMessageBox("Really important file downloaded successfully. Check your Music folder.");
+      if (is_undefined(ctrl_FileSystem.findFileByName(new Music(), "Message from Minerva.ogg"))) {
+        ctrl_FileSystem.addFile(new Music(), new EncryptedFile(new MediaFile("Message from Minerva.ogg", 40, noone))); // TODO
       }
       ctrl_GameManager.got_gods_file = true;
-      break;
-    case 3:
-      // Get encryption key
-      // TODO This
       break;
     }
   }
@@ -123,8 +126,6 @@ function _RomanGods_Listbox(owner) : Listbox() constructor {
       return "Research Gods";
     case 2:
       return "Download Really Important File";
-    case 3:
-      return "Get Encryption Key";
     }
   }
 
@@ -134,6 +135,45 @@ function _RomanGods_Listbox(owner) : Listbox() constructor {
 
   static onClick = function(idx) {
     _owner.doClick(idx);
+  }
+
+}
+
+function _RomanGods_Password(owner) : MultilineTextArea() constructor {
+  _owner = owner;
+
+  setText("Encryption password: 'green olives'");
+
+  static xPos = function() {
+    return _owner.getOwner().contentX() + WEBSITE_WIDTH - 128;
+  }
+
+  static yPos = function() {
+    return _owner.getOwner().contentY() + WEBSITE_HEIGHT - 48;
+  }
+
+  static getWidth = function() {
+    return 380;
+  }
+
+  static getHeight = function() {
+    return 80;
+  }
+
+  static doesDrawRect = function() {
+    return false;
+  }
+
+  static _parent_draw = draw;
+
+  static draw = function() {
+    if (ctrl_GameManager.can_see_password) {
+      _parent_draw();
+    }
+  }
+
+  static getFont = function() {
+    return fnt_Footnote;
   }
 
 }

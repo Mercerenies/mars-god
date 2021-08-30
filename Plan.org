@@ -81,7 +81,7 @@
    you've got to listen to me. You fell into a hole and now you're
    trapped on earth! Reply to this message if you see it!" Reply to
    the email to continue.
-** STAGE 6 (DATA)
+** +STAGE 6 (DATA)+
    More data entry, at the urging of your boss. As we proceed, the
    data entry fields focus more and more on text like "wake up" and
    "you're dreaming".
@@ -126,7 +126,7 @@
    After the computer finishes rebooting, you'll get a message from
    your boss telling you to, naturally, get back to work. Do it. Do
    more work.
-** STAGE 14
+** +STAGE 14+
    One of your coworkers messages you. He says you've been working too
    hard. He tells you to go and play a game of Minebroomer to cool
    off. You need to go play Minebroomer. After winning one game or
@@ -175,6 +175,7 @@
 ** DONE BSOD
 ** DONE SHUTDOWN OPTION
 ** PEOPLE IN CHAT HAVE MESSAGES MAKING FUN OF THEM?
+** WIKI CREDITS
 * ACHIEVEMENTS
 ** HARD WORKER (HW)
    Do way more data entry than required.
@@ -205,3 +206,24 @@
    Restart the computer.
 ** IM the DM (IMTDM)
    Message "Mercer" in instant messaging
+* SCRIPT
+** INTRO
+   + Mars: "Greetings! I am Mars, god of war!"
+   + Boss: "Oh, you must be the new intern. You know we have a dress code, right?"
+   + Boss: "Eh, whatever. Your computer is over there. Get logged in and I'll send you a message with some instructions."
+   + (cut to screen)
+   + Mars: "What is this strange box?"
+   + Mars: "By Jupiter, the display is alit!"
+   + Mars: "When I maneuver this small rodent, the display responds in kind."
+** AUDIO FILE
+   + Minerva: "Listen to me, Mars! There isn't much time! You need to go back to RomanGods.com and log in. There's important information over there."
+** BAD ENDING
+   + Mars: "Gah! What a horrible nightmare!"
+   + Minerva: "It's okay, Mars, you're awake now."
+   + Minerva: "Your computer is over there. Get logged in and I'll send you a message with some instructions."
+   + Mars: "Nooooooooo!"
+** GOOD ENDING
+   + Mars: "Gah! What a horrible nightmare!"
+   + Minerva: "It's okay, Mars, you're awake now. You're free. We're all free."
+   + Mars: "We did it!"
+   + Mars: "Thank you for playing!"

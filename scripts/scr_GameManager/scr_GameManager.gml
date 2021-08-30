@@ -119,3 +119,25 @@ function AddMail(file, announce) : GameEvent() constructor {
   }
 
 }
+
+function BSODEvent() : GameEvent() constructor {
+  static run = function() {
+    var override = instance_create_layer(0, 0, "Instances_Override", obj_BSOD);
+    ctrl_WindowManager.setOverride(override);
+  }
+}
+
+function StapleyFreeze() : GameEvent() constructor {
+  static run = function() {
+    obj_Stapley.x = room_width / 2;
+    obj_Stapley.y = room_height / 2;
+    obj_Stapley.frozen = true;
+  }
+}
+
+function StapleyAngry() : GameEvent() constructor {
+  static run = function() {
+    obj_Stapley.angry = true;
+    obj_Stapley.hp = 10;
+  }
+}

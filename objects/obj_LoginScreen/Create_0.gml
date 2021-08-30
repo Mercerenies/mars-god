@@ -32,6 +32,12 @@ doLogin = function() {
       instance_destroy();
     }
   } else {
-    _error_box.setText("Unknown username! Did you mean 'Mars'?");
+    if ((ctrl_GameManager.admin) && (username == "admin") && (password == "password")) {
+      instance_destroy();
+      ctrl_GameManager.is_admin = true;
+      obj_Taskbar.disabled = true;
+    } else {
+      _error_box.setText("Unknown username! Did you mean 'Mars'?");
+    }
   }
 }

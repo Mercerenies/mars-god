@@ -65,7 +65,7 @@ function EncryptedFile(real_file) : File() constructor {
     if (ctrl_GameManager.decrypted) {
       _real_file.openFile()
     } else {
-      showErrorBox("This file is encrypted!"); // TODO Actual popup box
+      Windows.addOrFindWindow(new FileDecryptor(), 90, 90, -1, -1);
     }
   }
 

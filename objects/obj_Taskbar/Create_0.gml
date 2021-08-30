@@ -1,5 +1,6 @@
 
 start_button = new StartButton();
+disabled = false;
 
 currentCellWidth = function() {
   var total_available_space = ScreenRegion.RIGHT - ScreenRegion.LEFT - TASKBAR_PADDING * 2;
@@ -28,8 +29,10 @@ cellEndY = function(cell_index) {
 }
 
 event = function(ev) {
-  Events.callOn(self, ev);
-  start_button.event(ev);
+  if (!disabled) {
+    Events.callOn(self, ev);
+    start_button.event(ev);
+  }
 }
 
 // Mouse down

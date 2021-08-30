@@ -1,4 +1,8 @@
 
+if (disabled) {
+  exit;
+}
+
 draw_self();
 
 var cell_width = currentCellWidth();

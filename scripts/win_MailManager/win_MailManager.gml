@@ -261,6 +261,7 @@ function _MailComposer_SendButton(owner) : SpriteButton() constructor {
     file.onReply();
     ctrl_WindowManager.close(_owner.getOwner());
     showMessageBox("Reply sent!");
+    ctrl_GameManager.replied = true;
   }
 
 }
